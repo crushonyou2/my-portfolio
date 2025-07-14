@@ -1,0 +1,74 @@
+{
+  "about": {
+    "title": "👋 About Me",
+    "description": [
+        "I'm Joe Jigwan, a senior student majoring in Computer Engineering at Kyonggi University. Through various projects such as object detection AI and a RAG-based car assistant, I've developed practical backend skills.",
+        "I have applied various technologies in real-world scenarios, including REST API development with Java/Spring Boot, real-time notifications with MongoDB, and deployment on AWS through team projects and capstone experiences."
+    ],
+    "strengthTitle": "💡 Core Strengths",
+    "strength1": "Experience in designing and deploying RESTful APIs using Spring Boot and AWS",
+    "strength2": "Frontend and full-stack development with React + TypeScript SPA",
+    "strength3": "Implemented object detection model with YOLO + TACO dataset and awarded for thesis",
+    "strength4": "Backend development of RAG-based car assistant system and awarded silver in capstone project",
+    "skillsTitle": "🛠 My Skills"
+  },
+  "projects": {
+    "title": "💼 Featured Projects",
+    "movie_diary": "An AI emotion-based service that analyzes user diaries to classify emotions and recommends movies. Built with React and Flask.",
+    "gildongE": "A Spring Boot and MongoDB-based car assistant backend system. Handled real-time notifications, consumable replacement calculations, and API deployment.",
+    "build_your_health": "A React-based health routine management app. Allows users to log status data and manage goal-based routines.",
+    "kakao_clone": "A KakaoTalk UI clone project from the Nomad Coders Challenge. Selected as an outstanding work. Implemented responsive UI and message list interface using HTML/CSS/JS.",
+    "kakao_award_link": "View award announcement →",
+    "view_github": "View on GitHub →",
+    "toggle_open": "Show more projects ▼",
+    "toggle_close": "Hide additional projects ▲",
+    "poster_open": "View project poster ▼",
+    "poster_close": "Hide poster ▲",
+    "dragonball": "A price comparison web service for PC parts",
+    "dynamic_scraper": "Web crawling practice using BeautifulSoup + Playwright",
+    "momentum": "A clone of the Momentum app implementing weather, greeting, and to-do list"
+  },
+  "contact": {
+    "title": "📮 Contact Me",
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Your Message",
+    "send": "Send",
+    "success": "Your message has been sent successfully.",
+    "error": "An error occurred while sending the message"
+  },
+  "language": {
+    "toggle": "한국어"
+  },
+  "info": {
+  "education": {
+    "title": "🎓 Education",
+    "list": [
+      "Kyonggi University (Suwon), Department of Computer Engineering",
+      "Mar. 2020 ~ Feb. 2026 (Expected Graduation)"
+    ]
+  },
+  "certifications": {
+    "title": "📜 Certifications",
+    "list": [
+      "CSTS Foundation Level – Aug. 2024 (TTA: Telecommunications Technology Association)",
+      "Information Processing Engineer – Passed Written Exam (Mar. 2025, HRDK)",
+      "Class 1 Driver’s License – Acquired in Sep. 2021 (Korean National Police Agency)"
+    ]
+  },
+  "awards": {
+    "title": "🏆 Awards",
+    "list": [
+      "Silver Prize – 2024 KIISE Summer Conference Paper Competition",
+      "Silver Prize – 2025 Kyonggi University Capstone Design Contest"
+    ]
+  },
+  "military": {
+    "title": "👨‍✈️ Military Service",
+    "list": [
+      "Honorably discharged as Army Sergeant (Mar. 2022 ~ Sep. 2023)"
+    ]
+  }
+}
+
+}

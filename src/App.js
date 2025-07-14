@@ -3,19 +3,32 @@ import About from './components/About';
 import Info from './components/Info';
 import { motion, AnimatePresence } from "framer-motion";
 import Contact from './components/Contact';
+import { useTranslation } from 'react-i18next';
+
+const LanguageToggle = () => {
+  const { t, i18n } = useTranslation();
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'en' ? 'ko' : 'en';
+    i18n.changeLanguage(newLang);
+  };
+
+  return (
+    <button onClick={toggleLanguage} className="absolute top-4 right-4 text-sm text-gray-500 hover:underline">
+      {t('language.toggle')}
+    </button>
+  );
+};
 
 function App() {
+  const { t } = useTranslation();
   const [showOthers, setShowOthers] = useState(false);
 
   return (
     <div className="min-h-screen bg-gray-100 text-gray-800 p-6 space-y-10">
-      {/* 소개 및 핵심 역량 */}
+      <LanguageToggle />
       <About />
-
-      {/* 학력, 자격증, 수상 등 */}
       <Info />
 
-      {/* 주요 프로젝트 */}
       <motion.section
         id="projects"
         className="max-w-4xl mx-auto scroll-mt-20"
@@ -24,38 +37,36 @@ function App() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <h2 className="text-2xl font-bold mb-4">💼 주요 프로젝트</h2>
+        <h2 className="text-2xl font-bold mb-4">{t('projects.title')}</h2>
         <div className="space-y-6">
           <Project
             title="movie_diary"
-            description="사용자 일기를 분석해 감정을 분류하고, 그에 맞는 영화를 추천하는 AI 감성 기반 서비스입니다. React와 Flask 기반으로 구현했습니다."
+            description={t('projects.movie_diary')}
             link="https://github.com/crushonyou2/movie_diary"
           />
           <Project
             title="gildongE"
-            description="Spring Boot와 MongoDB 기반 차량 어시스턴트 백엔드 시스템. 실시간 알림, 소모품 교체 주기 계산, API 설계 및 배포를 담당했습니다."
+            description={t('projects.gildongE')}
             link="https://github.com/crushonyou2/gildongE"
             poster={process.env.PUBLIC_URL + "/gildongE_poster.jpg"}
           />
           <Project
             title="Build-Your-Health"
-            description="React 기반 건강 루틴 관리 앱. 사용자 상태 데이터를 기록하고 목표 기반 루틴 관리 기능을 구현했습니다."
+            description={t('projects.build_your_health')}
             link="https://github.com/crushonyou2/Build-Your-Health"
           />
           <Project
             title="kakao-clone"
             description={
               <>
-                노마드코더 챌린지 기반의 카카오톡 클론 UI 프로젝트입니다. 해당 기수 우수작으로 선정되었으며,
-                HTML/CSS/JS 기반으로 반응형 UI와 메시지 리스트 인터페이스를 구현했습니다.
-                <br />
+                {t('projects.kakao_clone')}<br />
                 <a
                   href="https://nomadcoders.co/community/thread/8730"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-blue-500 underline block mt-2"
                 >
-                  우수작 선정 게시글 보기 →
+                  {t('projects.kakao_award_link')}
                 </a>
               </>
             }
@@ -64,7 +75,6 @@ function App() {
         </div>
       </motion.section>
 
-      {/* 기타 프로젝트 (토글) */}
       <motion.section
         className="max-w-4xl mx-auto"
         initial={{ opacity: 0, y: 30 }}
@@ -77,7 +87,7 @@ function App() {
             className="text-blue-600 hover:underline text-sm"
             onClick={() => setShowOthers(!showOthers)}
           >
-            {showOthers ? '기타 프로젝트 닫기 ▲' : '기타 프로젝트 보기 ▼'}
+            {showOthers ? t('projects.toggle_close') : t('projects.toggle_open')}
           </button>
         </div>
 
@@ -93,17 +103,17 @@ function App() {
             >
               <MiniProject
                 title="dragonball"
-                description="PC 부품 정보를 비교 분석하는 가격 비교 웹 서비스"
+                description={t('projects.dragonball')}
                 link="https://github.com/crushonyou2/dragonball"
               />
               <MiniProject
                 title="dynamic_scraper"
-                description="BeautifulSoup + Playwright 기반 웹 크롤링 연습"
+                description={t('projects.dynamic_scraper')}
                 link="https://github.com/crushonyou2/dynamic_scraper"
               />
               <MiniProject
                 title="momentum"
-                description="날씨·인삿말·투두리스트를 구현한 모멘텀 앱 클론"
+                description={t('projects.momentum')}
                 link="https://github.com/crushonyou2/momentum"
               />
             </motion.div>
@@ -111,9 +121,7 @@ function App() {
         </AnimatePresence>
       </motion.section>
 
-      {/* 연락처 폼 */}
       <Contact />
-      {/* 푸터 */}
       <footer className="mt-16 text-sm text-gray-500 text-center">
         © 2025 조지관 — GitHub: <a href="https://github.com/crushonyou2" className="underline">crushonyou2</a>
       </footer>
@@ -122,6 +130,7 @@ function App() {
 }
 
 function Project({ title, description, link, poster }) {
+  const { t } = useTranslation();
   const [showPoster, setShowPoster] = useState(false);
 
   return (
@@ -134,17 +143,16 @@ function Project({ title, description, link, poster }) {
         rel="noopener noreferrer"
         className="inline-block mt-2 text-blue-600 hover:underline"
       >
-        GitHub 보기 →
+        {t('projects.view_github')}
       </a>
 
-      {/* 포스터 토글 */}
       {poster && (
         <div className="mt-3">
           <button
             onClick={() => setShowPoster(!showPoster)}
             className="text-sm text-blue-500 hover:underline"
           >
-            {showPoster ? '포스터 닫기 ▲' : '프로젝트 포스터 보기 ▼'}
+            {showPoster ? t('projects.poster_close') : t('projects.poster_open')}
           </button>
           <AnimatePresence>
             {showPoster && (
@@ -165,7 +173,6 @@ function Project({ title, description, link, poster }) {
     </div>
   );
 }
-
 
 function MiniProject({ title, description, link }) {
   return (

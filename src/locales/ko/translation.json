@@ -1,0 +1,74 @@
+{
+  "about": {
+    "title": "👋 About Me",
+    "description": [
+    "경기대학교 컴퓨터공학부 4학년 재학 중인 조지관입니다. 객체 탐지 AI, RAG 기반 차량 비서 등 다양한 프로젝트를 경험하며 실전 중심의 백엔드 역량을 길렀습니다.",
+    "Java/Spring Boot 기반 REST API 개발, MongoDB 실시간 알림, AWS 배포 등 팀 프로젝트와 캡스톤 경험을 통해 다양한 기술을 실무에 적용했습니다."
+    ],
+    "strengthTitle": "💡 핵심 역량",
+    "strength1": "Spring Boot 기반 RESTful API 서버 설계 및 AWS 배포 경험",
+    "strength2": "React + TypeScript 기반 SPA 프론트엔드 및 풀스택 개발",
+    "strength3": "YOLO + TACO 데이터셋 기반 객체 탐지 모델 구현 및 논문 수상",
+    "strength4": "RAG 기반 차량 비서 시스템 백엔드 개발 및 캡스톤 은상 수상",
+    "skillsTitle": "🛠 나의 스킬"
+  },
+  "projects": {
+    "title": "💼 주요 프로젝트",
+    "movie_diary": "사용자 일기를 분석해 감정을 분류하고, 그에 맞는 영화를 추천하는 AI 감성 기반 서비스입니다. React와 Flask 기반으로 구현했습니다.",
+    "gildongE": "Spring Boot와 MongoDB 기반 차량 어시스턴트 백엔드 시스템. 실시간 알림, 소모품 교체 주기 계산, API 설계 및 배포를 담당했습니다.",
+    "build_your_health": "React 기반 건강 루틴 관리 앱. 사용자 상태 데이터를 기록하고 목표 기반 루틴 관리 기능을 구현했습니다.",
+    "kakao_clone": "노마드코더 챌린지 기반의 카카오톡 클론 UI 프로젝트입니다. 해당 기수 우수작으로 선정되었으며, HTML/CSS/JS 기반으로 반응형 UI와 메시지 리스트 인터페이스를 구현했습니다.",
+    "kakao_award_link": "우수작 선정 게시글 보기 →",
+    "view_github": "GitHub 보기 →",
+    "toggle_open": "기타 프로젝트 보기 ▼",
+    "toggle_close": "기타 프로젝트 닫기 ▲",
+    "poster_open": "프로젝트 포스터 보기 ▼",
+    "poster_close": "포스터 닫기 ▲",
+    "dragonball": "PC 부품 정보를 비교 분석하는 가격 비교 웹 서비스",
+    "dynamic_scraper": "BeautifulSoup + Playwright 기반 웹 크롤링 연습",
+    "momentum": "날씨·인삿말·투두리스트를 구현한 모멘텀 앱 클론"
+  },
+  "contact": {
+    "title": "📮 문의하기",
+    "name": "이름",
+    "email": "이메일",
+    "message": "내용",
+    "send": "보내기",
+    "success": "문의가 성공적으로 전송되었습니다.",
+  "error": "전송 중 문제가 발생했습니다"
+  },
+  "language": {
+    "toggle": "English"
+  },
+  "info": {
+  "education": {
+    "title": "🎓 학력",
+    "list": [
+      "경기대학교 (수원) 컴퓨터공학부",
+      "2020.03 ~ 2026.02 (졸업예정)"
+    ]
+  },
+  "certifications": {
+    "title": "📜 자격증",
+    "list": [
+      "CSTS Foundation Level – 2024.08 (한국정보통신기술협회)",
+      "정보처리기사 – 필기합격 (2025.03, 한국산업인력공단)",
+      "1종 보통 운전면허 – 2021.09 취득 (경찰청)"
+    ]
+  },
+  "awards": {
+    "title": "🏆 수상",
+    "list": [
+      "2024 한국정보기술학회 하계 종합학술대회 논문경진대회 – 은상",
+      "2025 경기대학교 졸업 캡스톤 경연대회 – 은상"
+    ]
+  },
+  "military": {
+    "title": "🪖 병역",
+    "list": [
+      "육군 병장 만기 전역 (2022.03 ~ 2023.09)"
+    ]
+  }
+}
+
+}
