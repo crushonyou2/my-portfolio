@@ -35,7 +35,7 @@ function App() {
             title="gildongE"
             description="Spring Boot와 MongoDB 기반 차량 어시스턴트 백엔드 시스템. 실시간 알림, 소모품 교체 주기 계산, API 설계 및 배포를 담당했습니다."
             link="https://github.com/crushonyou2/gildongE"
-            poster="/gildongE_poster.jpg"
+            poster={process.env.PUBLIC_URL + "/gildongE_poster.jpg"}
           />
           <Project
             title="Build-Your-Health"
