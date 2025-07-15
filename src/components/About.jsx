@@ -2,8 +2,14 @@ import { motion } from "framer-motion";
 import profileImage from "../assets/profile.jpg";
 import { useTranslation } from 'react-i18next';
 
+const SkillTag = ({ text }) => (
+  <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded-md text-sm">
+    {text}
+  </span>
+);
+
 const About = () => {
-  const { t } = useTranslation();  // i18n hook
+  const { t } = useTranslation(); // i18n hook
   const description = t('about.description', { returnObjects: true });
 
   return (
@@ -28,12 +34,12 @@ const About = () => {
         <div className="text-justify flex-1">
           <h2 className="text-2xl font-bold mb-4">{t('about.title')}</h2>
           {Array.isArray(description) ? (
-        description.map((line, index) => (
-          <p key={index} className="text-gray-800 leading-relaxed mb-2">{line}</p>
-        ))
-      ) : (
-        <p className="text-gray-800 leading-relaxed">{description}</p>
-      )}
+            description.map((line, index) => (
+              <p key={index} className="text-gray-800 leading-relaxed mb-2">{line}</p>
+            ))
+          ) : (
+            <p className="text-gray-800 leading-relaxed">{description}</p>
+          )}
         </div>
       </div>
 
@@ -47,20 +53,49 @@ const About = () => {
       </ul>
 
       {/* 기술 스택 */}
-      <h3 className="text-xl font-semibold mt-6 mb-2">{t('about.skillsTitle')}</h3>
-      <div className="flex flex-wrap gap-2">
-        {[
-          'Java', 'Spring Boot', 'REST API', 'AWS', 'TypeScript', 'ReactJS', 'Node.js',
-          'MySQL', 'MongoDB', 'Python', 'YOLO', 'AI/인공지능', 'C', 'JavaScript',
-          'Git', 'JSP', 'Postman', 'OAuth2'
-        ].map(skill => (
-          <span
-            key={skill}
-            className="bg-blue-100 text-blue-700 px-2 py-1 rounded-md text-sm"
-          >
-            {skill}
-          </span>
-        ))}
+      <h3 className="text-xl font-semibold mt-6 mb-4">{t('about.skillsTitle')}</h3>
+
+      <div className="space-y-4">
+        <div>
+          <h4 className="font-semibold text-gray-700 mb-1">🔧 Backend</h4>
+          <div className="flex flex-wrap gap-2">
+            <SkillTag text="Java" />
+            <SkillTag text="Spring Boot" />
+            <SkillTag text="Node.js" />
+            <SkillTag text="REST API" />
+            <SkillTag text="MySQL" />
+            <SkillTag text="MongoDB" />
+            <SkillTag text="JSP" />
+            <SkillTag text="OAuth2" />
+            <SkillTag text="C" />
+          </div>
+        </div>
+
+        <div>
+          <h4 className="font-semibold text-gray-700 mb-1">🎨 Frontend</h4>
+          <div className="flex flex-wrap gap-2">
+            <SkillTag text="ReactJS" />
+            <SkillTag text="TypeScript" />
+            <SkillTag text="JavaScript" />
+          </div>
+        </div>
+
+        <div>
+          <h4 className="font-semibold text-gray-700 mb-1">🧠 AI</h4>
+          <div className="flex flex-wrap gap-2">
+            <SkillTag text="Python" />
+            <SkillTag text="YOLO" />
+          </div>
+        </div>
+
+        <div>
+          <h4 className="font-semibold text-gray-700 mb-1">🚀 Deployment / Tools</h4>
+          <div className="flex flex-wrap gap-2">
+            <SkillTag text="AWS" />
+            <SkillTag text="Git" />
+            <SkillTag text="Postman" />
+          </div>
+        </div>
       </div>
     </motion.section>
   );
