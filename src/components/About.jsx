@@ -61,20 +61,28 @@ const About = () => {
           <div className="flex flex-wrap gap-2">
             <SkillTag text="Java" />
             <SkillTag text="Spring Boot" />
-            <SkillTag text="Node.js" />
+            <SkillTag text="Spring Data JPA" />
             <SkillTag text="REST API" />
+            <SkillTag text="OAuth2" />
+            <SkillTag text="JWT" />
             <SkillTag text="MySQL" />
             <SkillTag text="MongoDB" />
-            <SkillTag text="JSP" />
-            <SkillTag text="OAuth2" />
-            <SkillTag text="C" />
+          </div>
+        </div>
+
+        <div>
+          <h4 className="font-semibold text-gray-700 mb-1">🚀 Infra / DevOps</h4>
+          <div className="flex flex-wrap gap-2">
+            <SkillTag text="AWS" />
+            <SkillTag text="Docker" />
+            <SkillTag text="GitHub Actions" />
           </div>
         </div>
 
         <div>
           <h4 className="font-semibold text-gray-700 mb-1">🎨 Frontend</h4>
           <div className="flex flex-wrap gap-2">
-            <SkillTag text="ReactJS" />
+            <SkillTag text="React" />
             <SkillTag text="TypeScript" />
             <SkillTag text="JavaScript" />
           </div>
@@ -85,15 +93,8 @@ const About = () => {
           <div className="flex flex-wrap gap-2">
             <SkillTag text="Python" />
             <SkillTag text="YOLO" />
-          </div>
-        </div>
-
-        <div>
-          <h4 className="font-semibold text-gray-700 mb-1">🚀 Deployment / Tools</h4>
-          <div className="flex flex-wrap gap-2">
-            <SkillTag text="AWS" />
-            <SkillTag text="Git" />
-            <SkillTag text="Postman" />
+            <SkillTag text="PyTorch" />
+            <SkillTag text="OpenCV" />
           </div>
         </div>
       </div>

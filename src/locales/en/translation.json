@@ -2,14 +2,14 @@
   "about": {
     "title": "👋 About Me",
     "description": [
-        "I'm Joe Jigwan, a senior student majoring in Computer Engineering at Kyonggi University. Through various projects such as object detection AI and a RAG-based car assistant, I've developed practical backend skills.",
-        "I have applied various technologies in real-world scenarios, including REST API development with Java/Spring Boot, real-time notifications with MongoDB, and deployment on AWS through team projects and capstone experiences."
+        "I'm Joe Jigwan, a backend-oriented developer and a senior student majoring in Computer Engineering at Kyonggi University. I mainly focus on building web services and server-side applications with Java and Spring Boot.",
+        "Through capstone projects, research activities, and team projects, I’ve gained hands-on experience in designing REST APIs, implementing real-time notifications with MongoDB, and deploying services on AWS in environments close to production."
     ],
     "strengthTitle": "💡 Core Strengths",
-    "strength1": "Experience in designing and deploying RESTful APIs using Spring Boot and AWS",
-    "strength2": "Frontend and full-stack development with React + TypeScript SPA",
-    "strength3": "Implemented object detection model with YOLO + TACO dataset and awarded for thesis",
-    "strength4": "Backend development of RAG-based car assistant system and awarded silver in capstone project",
+    "strength1": "Experience in designing and deploying RESTful API servers with Spring Boot and AWS",
+    "strength2": "Database-centric development including schema design, indexing, and transaction handling",
+    "strength3": "Frontend and full-stack development with React + TypeScript SPA",
+    "strength4": "Implemented an object detection model with YOLO + TACO dataset and developed a RAG-based car assistant backend, both of which led to award-winning projects",
     "skillsTitle": "🛠 My Skills"
   },
   "projects": {
@@ -52,6 +52,7 @@
     "title": "📜 Certifications",
     "list": [
       "CSTS Foundation Level – Aug. 2024 (TTA: Telecommunications Technology Association)",
+      "TOPCIT – Score 506 (May. 2025)",
       "Information Processing Engineer – Passed Written Exam (Mar. 2025, HRDK, scheduled to take a practical test)",
       "Class 1 Driver’s License – Acquired in Sep. 2021 (Korean National Police Agency)"
     ]
@@ -59,8 +60,8 @@
   "awards": {
     "title": "🏆 Awards",
     "list": [
-      "Silver Prize – 2024 KIISE Summer Conference Paper Competition",
-      "Silver Prize – 2025 Kyonggi University Capstone Design Contest"
+      "Silver Prize – 2024 KIISE Summer Conference Paper Competition (Contributed to YOLO-based object detection model development)",
+      "Silver Prize – 2025 Kyonggi University Capstone Design Contest (RAG-based car assistant system)"
     ]
   },
   "military": {
