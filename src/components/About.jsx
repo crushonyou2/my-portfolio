@@ -76,6 +76,7 @@ const About = () => {
             <SkillTag text="AWS" />
             <SkillTag text="Docker" />
             <SkillTag text="GitHub Actions" />
+            <SkillTag text="Git" />
           </div>
         </div>
 
