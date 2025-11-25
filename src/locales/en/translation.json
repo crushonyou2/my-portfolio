@@ -2,14 +2,14 @@
   "about": {
     "title": "👋 About Me",
     "description": [
-        "I'm Joe Jigwan, a backend-oriented developer and a senior student majoring in Computer Engineering at Kyonggi University. I mainly focus on building web services and server-side applications with Java and Spring Boot.",
-        "Through capstone projects, research activities, and team projects, I’ve gained hands-on experience in designing REST APIs, implementing real-time notifications with MongoDB, and deploying services on AWS in environments close to production."
+        "I'm Joe Jigwan, a senior Computer Engineering student at Kyonggi University and an aspiring IT systems engineer. Through various projects, I’ve worked on server/DB operations, log analysis, AWS infrastructure setup, and CI/CD automation — gaining experience close to real-world service environments.",
+        "Through capstone, team, and research projects, I developed skills in operating REST API servers, handling real-time data processing with MongoDB Change Streams, and managing AWS-based deployments, focusing on system stability, operational efficiency, and understanding how services behave in production."
     ],
     "strengthTitle": "💡 Core Strengths",
-    "strength1": "Experience in designing and deploying RESTful API servers with Spring Boot and AWS",
-    "strength2": "Database-centric development including schema design, indexing, and transaction handling",
-    "strength3": "Frontend and full-stack development with React + TypeScript SPA",
-    "strength4": "Implemented an object detection model with YOLO + TACO dataset and developed a RAG-based car assistant backend, both of which led to award-winning projects",
+    "strength1": "Experience operating RESTful API servers with Spring Boot and managing AWS infrastructure",
+    "strength2": "Data-centric skills including schema design, indexing, and log-based analysis using RDB and MongoDB",
+    "strength3": "Experience working with React + TypeScript SPA (for understanding full service workflow)",
+    "strength4": "Problem-solving experience across diverse environments including YOLO/TACO-based detection and RAG-based car assistant systems",
     "skillsTitle": "🛠 My Skills"
   },
   "projects": {
