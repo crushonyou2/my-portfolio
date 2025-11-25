@@ -14,19 +14,19 @@
   },
   "projects": {
     "title": "💼 Featured Projects",
-    "movie_diary": "An AI emotion-based service that analyzes user diaries to classify emotions and recommends movies. Built with React and Flask.",
-    "gildongE": "A Spring Boot and MongoDB-based car assistant backend system. Handled real-time notifications, consumable replacement calculations, and API deployment.",
-    "build_your_health": "A React-based health routine management app. Allows users to log status data and manage goal-based routines.",
-    "kakao_clone": "A KakaoTalk UI clone project from the Nomad Coders Challenge. Selected as an outstanding work. Implemented responsive UI and message list interface using HTML/CSS/JS.",
+    "movie_diary": "A sentiment-based movie recommendation service that analyzes user diary entries. In this React–Flask architecture, I focused on managing data flow, integrating the AI model environment, and ensuring stable API communication between the frontend and backend.",
+    "gildongE": "A vehicle assistant backend system built with Spring Boot and MongoDB. I handled the notification-collection schema design, consumable replacement cycle logic, REST API design, and AWS deployment — gaining hands-on experience in backend operations, database processing, and cloud-based service management.",
+    "build_your_health": "A React-based health routine management application. Through this project, I learned how client-side state, data transmission, and UI logic interact within a service workflow.",
+    "kakao_clone": "A KakaoTalk UI clone built for a Nomad Coders challenge, selected as a distinguished submission. Implemented with HTML/CSS/JavaScript, focusing on responsive UI patterns, DOM rendering behavior, and layout optimization.",
     "kakao_award_link": "View award announcement →",
     "view_github": "View on GitHub →",
     "toggle_open": "Show more projects ▼",
     "toggle_close": "Hide additional projects ▲",
     "poster_open": "View project poster ▼",
     "poster_close": "Hide poster ▲",
-    "dragonball": "A price comparison web service for PC parts",
-    "dynamic_scraper": "Web crawling practice using BeautifulSoup + Playwright",
-    "momentum": "A clone of the Momentum app implementing weather, greeting, and to-do list"
+    "dragonball": "A PC component price-comparison service — practical experience in API structure planning and early-stage data normalization.",
+    "dynamic_scraper": "A web scraping practice project using BeautifulSoup and Playwright, improving asynchronous processing and website structural analysis.",
+    "momentum": "A small clone app featuring weather, greetings, and a to-do list — helpful for understanding modular UI functionality and client rendering flow."
   },
   "contact": {
     "title": "📮 Contact Me",
