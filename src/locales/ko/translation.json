@@ -2,14 +2,14 @@
   "about": {
     "title": "👋 About Me",
     "description": [
-    "경기대학교 컴퓨터공학부 4학년 재학 중인 백엔드 지향 개발자 조지관입니다. Java/Spring Boot 기반 웹 서비스와 서버 개발을 중심으로 경험을 쌓아왔습니다.",
-    "캡스톤 프로젝트와 팀·연구 활동을 통해 REST API 설계, MongoDB 기반 실시간 알림, AWS 환경 구축 및 배포 자동화(CI/CD) 등 실제 서비스 운영에 가까운 백엔드 경험을 갖추었습니다."
+    "경기대학교 컴퓨터공학부 4학년 재학 중인 IT 엔지니어 지망생 조지관입니다. 여러 프로젝트에서 서버·DB 운영, 로그 분석, AWS 인프라 설정, CI/CD 자동화 등 실제 서비스 운영과 가까운 환경에서 시스템을 안정적으로 관리하는 역량을 쌓아왔습니다.",
+    "캡스톤 프로젝트와 팀·연구 활동을 통해 REST API 서버 운영, MongoDB 기반 실시간 데이터 처리(Change Streams), AWS 인프라 구축 및 배포 자동화 등 서비스 안정성·운영 효율·데이터 흐름 이해에 기반한 경험을 보유하고 있습니다."
     ],
     "strengthTitle": "💡 핵심 역량",
-    "strength1": "Spring Boot 기반 RESTful API 서버 설계 및 AWS 배포 경험",
-    "strength2": "RDB 설계, 인덱싱 및 트랜잭션 처리 등 데이터베이스 중심 개발 경험",
-    "strength3": "React + TypeScript 기반 SPA 프론트엔드 및 풀스택 개발",
-    "strength4": "YOLO 기반 객체 탐지 모델 구현 및 연구 참여(논문 은상 수상), RAG 기반 차량 비서 시스템 백엔드 개발",
+    "strength1": "Spring Boot 기반 RESTful API 서버 운영 및 AWS 인프라 관리 경험",
+    "strength2": "RDB·MongoDB 기반 데이터 모델링, 인덱싱, 로그 분석 등 데이터 중심 운영 역량",
+    "strength3": "React + TypeScript 기반 SPA 활용 경험(운영 환경 이해 목적)",
+    "strength4": "YOLO·TACO 기반 객체 탐지, RAG 기반 차량 비서 시스템 등 다양한 기술 환경의 문제 해결 경험",
     "skillsTitle": "🛠 나의 스킬"
   },
   "projects": {
