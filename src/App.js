@@ -40,6 +40,11 @@ function App() {
         <h2 className="text-2xl font-bold mb-4">{t('projects.title')}</h2>
         <div className="space-y-6">
           <Project
+            title="fridge_d_day"
+            description={t('projects.fridge_d_day')}
+            link="https://github.com/crushonyou2/Fridge-D-Day"
+          />
+          <Project
             title="movie_diary"
             description={t('projects.movie_diary')}
             link="https://github.com/crushonyou2/movie_diary"

@@ -14,6 +14,7 @@
   },
   "projects": {
     "title": "💼 주요 프로젝트",
+    "fridge_d_day": "Android 네이티브 기반 식품 유통기한 관리 앱(Physical AI 응용)입니다. Google ML Kit OCR을 활용한 온디바이스 텍스트 인식 파이프라인 구축, Room DB·WorkManager를 이용한 로컬 데이터 처리 및 백그라운드 알림 시스템 구현, Jetpack Compose 기반의 선언형 UI 설계를 경험했습니다. (원스토어 정식 출시 완료: <a href='https://m.onestore.co.kr/v2/ko-kr/app/0001003331' target='_blank'>원스토어 링크</a>)",
     "movie_diary": "사용자 감정 데이터를 분석하여 맞춤 영화를 추천하는 서비스입니다. React–Flask 기반 구조에서 데이터 흐름 관리, 모델 연동 환경 구성, 서버–프론트 간 API 통신 안정성 확보를 경험했습니다.",
     "gildongE": "Spring Boot + MongoDB 기반 차량 어시스턴트 서버 시스템입니다. 알림용 컬렉션 구조 설계, 소모품 주기 계산 로직 운영, REST API 설계, AWS 배포 등 백엔드 운영·DB 데이터 처리·클라우드 환경 설정을 담당했습니다.",
     "build_your_health": "React 기반 건강 루틴 관리 앱입니다. 사용자 상태 기록·목표 기반 기능을 구현하며 프론트-백엔드 데이터 전송 구조와 클라이언트 상태 관리 흐름을 이해했습니다.",
