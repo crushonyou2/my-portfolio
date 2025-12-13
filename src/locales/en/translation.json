@@ -14,7 +14,8 @@
   },
   "projects": {
     "title": "💼 Featured Projects",
-    "fridge_d_day": "An Android native-based food expiration date management app (Physical AI application). I gained experience building an on-device text recognition pipeline using Google ML Kit OCR, implementing local data processing and a background notification system using Room DB and WorkManager, and designing a declarative UI based on Jetpack Compose. (Officially released on One Store: <a href=‘https://m.onestore.co.kr/v2/ko-kr/app/0001003331’ target=‘_blank’>One Store Link</a>)",
+    "fridge_d_day": "An Android native-based food expiration date management app (Physical AI application). I gained experience building an on-device text recognition pipeline using Google ML Kit OCR, implementing local data processing and a background notification system using Room DB and WorkManager, and designing a declarative UI based on Jetpack Compose.",
+    "fridge_d_day_link": "Go to One Store app page →",
     "movie_diary": "A sentiment-based movie recommendation service that analyzes user diary entries. In this React–Flask architecture, I focused on managing data flow, integrating the AI model environment, and ensuring stable API communication between the frontend and backend.",
     "gildongE": "A vehicle assistant backend system built with Spring Boot and MongoDB. I handled the notification-collection schema design, consumable replacement cycle logic, REST API design, and AWS deployment — gaining hands-on experience in backend operations, database processing, and cloud-based service management.",
     "build_your_health": "A React-based health routine management application. Through this project, I learned how client-side state, data transmission, and UI logic interact within a service workflow.",

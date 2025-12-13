@@ -40,8 +40,20 @@ function App() {
         <h2 className="text-2xl font-bold mb-4">{t('projects.title')}</h2>
         <div className="space-y-6">
           <Project
-            title="fridge_d_day"
-            description={t('projects.fridge_d_day')}
+            title="오늘도 신선"
+            description={
+              <>
+                {t('projects.fridge_d_day')}<br />
+                <a
+                  href="https://m.onestore.co.kr/v2/ko-kr/app/0001003331"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-500 underline block mt-2"
+                >
+                  {t('projects.fridge_d_day_link')}
+                </a>
+              </>
+            }
             link="https://github.com/crushonyou2/Fridge-D-Day"
           />
           <Project
