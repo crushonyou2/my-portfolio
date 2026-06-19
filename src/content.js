@@ -23,10 +23,10 @@ export const content = {
   // ── 히어로 (첫 화면) ──────────────────────────────────────────────────────
   hero: {
     name: { ko: "조지관", en: "Jigwan Joe" },
-    role: { ko: "백엔드 엔지니어", en: "Backend Engineer" },
+    role: { ko: "IT 엔지니어", en: "IT Engineer" },
     tagline: {
-      ko: "데이터와 클라우드로, 끝까지 동작하는 서비스를 만듭니다.",
-      en: "I build services that actually run end-to-end — powered by data and the cloud.",
+      ko: "기획부터 출시·운영까지, 직접 끝까지 만들어 봅니다.",
+      en: "I take things end-to-end — from planning to launch and operation.",
     },
     // 첫 화면에 보여줄 핵심 성과
     highlights: [
@@ -55,11 +55,11 @@ export const content = {
     profileImage: "profile.jpg",
     description: {
       ko: [
-        "경기대학교 컴퓨터공학부를 졸업한 IT 엔지니어 조지관입니다. 백엔드 서버와 데이터, 클라우드 인프라를 중심으로, 직접 만든 결과물이 실제 환경에서 끝까지 동작하게 만드는 일에 집중해 왔습니다. 직접 개발한 Android 앱을 원스토어에 출시했고, 캡스톤과 연구 프로젝트로 학회 논문 2편 게재와 은상 2회를 기록했습니다.",
+        "경기대학교 컴퓨터공학부를 졸업한 IT 엔지니어 조지관입니다. 서버·데이터·클라우드 인프라부터 앱 출시까지, 직접 만든 결과물이 실제 환경에서 끝까지 동작하게 만드는 일에 집중해 왔습니다. 직접 개발한 Android 앱을 원스토어에 출시했고, 캡스톤과 연구 프로젝트로 학회 논문 2편 게재와 은상 2회를 기록했습니다.",
         "Spring Boot 기반 REST API 서버 운영과 RDB·MongoDB 데이터 모델링·로그 분석을 중심으로, GitHub Actions와 AWS·Cloud Run을 활용한 배포 자동화·CI/CD를 경험했습니다. 여기에 Android, 풀스택 웹, YOLOv8·RAG 같은 AI까지 폭넓은 환경에서 문제를 풀어오며 서비스 안정성과 운영 효율, 데이터 흐름을 함께 보는 시야를 길렀습니다.",
       ],
       en: [
-        "I'm Jigwan Joe, an IT engineer and a Computer Engineering graduate of Kyonggi University. I focus on building things that actually run end-to-end in production, centered on backend servers, data, and cloud infrastructure. I shipped a self-built Android app on ONE Store, and through capstone and research projects I co-authored two conference papers and earned two Silver Prizes.",
+        "I'm Jigwan Joe, an IT engineer and a Computer Engineering graduate of Kyonggi University. From servers, data, and cloud infrastructure to shipping a mobile app, I focus on building things that actually run end-to-end in production. I shipped a self-built Android app on ONE Store, and through capstone and research projects I co-authored two conference papers and earned two Silver Prizes.",
         "My core work spans operating Spring Boot REST API servers and data modeling/log analysis with RDB and MongoDB, along with deployment automation and CI/CD using GitHub Actions, AWS, and Cloud Run. Beyond that, I've solved problems across a wide range of environments — Android, full-stack web, and AI such as YOLOv8 and RAG — building a perspective that balances service stability, operational efficiency, and data flow.",
       ],
     },
@@ -68,14 +68,14 @@ export const content = {
       ko: [
         "Spring Boot 기반 REST API 서버 운영, AWS·Cloud Run 배포 및 GitHub Actions CI/CD 자동화",
         "RDB·MongoDB 데이터 모델링·인덱싱·로그 분석 중심의 데이터 운영 역량 (SQLD·ADsP 보유)",
-        "Kotlin·Jetpack Compose 기반 Android 앱 개발 및 원스토어 출시",
+        "기획부터 원스토어 출시·운영까지 단독으로 진행한 Android 앱 개발 (제품 오너십)",
         "YOLOv8 대화형 쓰레기통 로봇·RAG 차량 어시스턴트 등 AI·임베디드 문제 해결 (학회 논문 2편, 수상 2회)",
         "JSP/Servlet MVC와 React 기반 풀스택 웹 개발 경험",
       ],
       en: [
         "Operating Spring Boot REST API servers with AWS/Cloud Run deployment and GitHub Actions CI/CD",
         "Data-centric operations with RDB/MongoDB modeling, indexing, and log analysis (SQLD, ADsP certified)",
-        "Developed and published an Android app on ONE Store with Kotlin and Jetpack Compose",
+        "Solely owned an Android app from planning to ONE Store launch and operation (product ownership)",
         "AI and embedded problem-solving — a YOLOv8 trash-can robot and a RAG car assistant (2 conference papers, 2 Prizes)",
         "Full-stack web development with JSP/Servlet MVC and React",
       ],
