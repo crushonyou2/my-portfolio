@@ -1,20 +1,9 @@
 import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
+import { content, pick } from '../content';
+import { useLang } from '../useLang';
 
 const Info = () => {
-  const { t } = useTranslation();
-
-  // 공통 렌더 함수
-  const renderSection = (title, items) => (
-    <div className="mb-6">
-      <h2 className="text-2xl font-bold mb-2">{title}</h2>
-      <ul className="list-disc list-inside">
-        {items.map((item, idx) => (
-          <li key={idx}>{item}</li>
-        ))}
-      </ul>
-    </div>
-  );
+  const lang = useLang();
 
   return (
     <motion.section
@@ -24,25 +13,16 @@ const Info = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: 0.1 }}
     >
-      {renderSection(
-        t('info.education.title'),
-        t('info.education.list', { returnObjects: true })
-      )}
-
-      {renderSection(
-        t('info.certifications.title'),
-        t('info.certifications.list', { returnObjects: true })
-      )}
-
-      {renderSection(
-        t('info.awards.title'),
-        t('info.awards.list', { returnObjects: true })
-      )}
-
-      {renderSection(
-        t('info.military.title'),
-        t('info.military.list', { returnObjects: true })
-      )}
+      {content.info.map((section, idx) => (
+        <div key={idx} className="mb-6">
+          <h2 className="text-2xl font-bold mb-2">{pick(section.title, lang)}</h2>
+          <ul className="list-disc list-inside">
+            {pick(section.list, lang).map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </motion.section>
   );
 };
