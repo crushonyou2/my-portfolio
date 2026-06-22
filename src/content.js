@@ -69,6 +69,7 @@ export const content = {
         "Spring Boot 기반 REST API 서버 운영, AWS·Cloud Run 배포 및 GitHub Actions CI/CD 자동화",
         "RDB·MongoDB 데이터 모델링·인덱싱·로그 분석 중심의 데이터 운영 역량 (SQLD·ADsP 보유)",
         "기획부터 원스토어 출시·운영까지 단독으로 진행한 Android 앱 개발 (제품 오너십)",
+        "RAG 파이프라인(임베딩·벡터검색·리랭킹·근거기반 생성) 직접 구축 및 평가셋 기반 검색 품질 측정·개선 (recall@1 +12%p)",
         "YOLOv8 대화형 쓰레기통 로봇·RAG 차량 어시스턴트 등 AI·임베디드 문제 해결 (학회 논문 2편, 수상 2회)",
         "JSP/Servlet MVC와 React 기반 풀스택 웹 개발 경험",
       ],
@@ -76,6 +77,7 @@ export const content = {
         "Operating Spring Boot REST API servers with AWS/Cloud Run deployment and GitHub Actions CI/CD",
         "Data-centric operations with RDB/MongoDB modeling, indexing, and log analysis (SQLD, ADsP certified)",
         "Solely owned an Android app from planning to ONE Store launch and operation (product ownership)",
+        "Built a full RAG pipeline (embeddings, vector search, reranking, grounded generation) and measured/improved retrieval quality with an evaluation set (recall@1 +12%p)",
         "AI and embedded problem-solving — a YOLOv8 trash-can robot and a RAG car assistant (2 conference papers, 2 Prizes)",
         "Full-stack web development with JSP/Servlet MVC and React",
       ],
@@ -170,6 +172,17 @@ export const content = {
 
     // 주요 프로젝트 (카드로 표시). link가 null이면 'GitHub 보기' 버튼이 숨겨집니다.
     featured: [
+      {
+        title: "혜택나침반 (청년정책 RAG 도우미)",
+        period: "2026.06",
+        tech: ["Spring Boot", "Python", "FastAPI", "RAG", "pgvector", "React", "Gemini", "sentence-transformers"],
+        link: "https://github.com/crushonyou2/benefit-compass",
+        poster: null,
+        desc: {
+          ko: "흩어진 공공 청년정책 데이터(2,631건)를 직접 수집·정제해, RAG 파이프라인(임베딩·pgvector 벡터검색·cross-encoder 리랭킹·근거기반 생성)을 컴포넌트 단위로 직접 구축한 검색·질의응답 서비스입니다. LLM API를 단순 호출하는 데 그치지 않고, 합성 평가셋 60문항으로 검색 품질을 측정하고 리랭킹을 적용해 1순위 정답률(recall@1)을 40%→52%로 개선했습니다. 주력인 Spring Boot(API)와 ML(Python)을 분리한 폴리글랏 마이크로서비스로 설계했으며, 답변은 검색된 정책만 근거로 인용해 환각을 방지했습니다. 공공데이터 지역코드 품질 한계를 진단해 토픽 검색으로 스코프를 명확히 정한 의사결정까지 포함합니다.",
+          en: "A search and Q&A service for Korean youth-policy benefits where I built the RAG pipeline component by component — embeddings, pgvector vector search, a cross-encoder reranker, and grounded generation — rather than just calling an LLM API. I collected and cleaned 2,631 public-policy records, then used a 60-question synthetic evaluation set to measure retrieval quality and applied reranking to lift top-1 accuracy (recall@1) from 40% to 52%. It's designed as a polyglot microservice that splits a Spring Boot API (my core stack) from a Python ML service, and answers cite only retrieved policies to prevent hallucination. It also reflects a deliberate scoping decision made after diagnosing public-data region-code quality limits — positioning it as topic-based search.",
+        },
+      },
       {
         title: "AI 차량 어시스턴트 - 길동이",
         period: "2025.03 ~ 2025.06",
