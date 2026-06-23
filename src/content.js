@@ -182,6 +182,10 @@ export const content = {
           ko: "흩어진 공공 청년정책 데이터(2,631건)를 직접 수집·정제해, RAG 파이프라인(임베딩·pgvector 벡터검색·cross-encoder 리랭킹·근거기반 생성)을 컴포넌트 단위로 직접 구축한 검색·질의응답 서비스입니다. LLM API를 단순 호출하는 데 그치지 않고, 합성 평가셋 60문항으로 검색 품질을 측정하고 리랭킹을 적용해 1순위 정답률(recall@1)을 40%→52%로 개선했습니다. 주력인 Spring Boot(API)와 ML(Python)을 분리한 폴리글랏 마이크로서비스로 설계했으며, 답변은 검색된 정책만 근거로 인용해 환각을 방지했습니다. 공공데이터 지역코드 품질 한계를 진단해 토픽 검색으로 스코프를 명확히 정한 의사결정까지 포함합니다.",
           en: "A search and Q&A service for Korean youth-policy benefits where I built the RAG pipeline component by component — embeddings, pgvector vector search, a cross-encoder reranker, and grounded generation — rather than just calling an LLM API. I collected and cleaned 2,631 public-policy records, then used a 60-question synthetic evaluation set to measure retrieval quality and applied reranking to lift top-1 accuracy (recall@1) from 40% to 52%. It's designed as a polyglot microservice that splits a Spring Boot API (my core stack) from a Python ML service, and answers cite only retrieved policies to prevent hallucination. It also reflects a deliberate scoping decision made after diagnosing public-data region-code quality limits — positioning it as topic-based search.",
         },
+        extraLink: {
+          href: "https://crushonyou2.github.io/benefit-compass",
+          label: { ko: "라이브 데모 →", en: "Live demo →" },
+        },
       },
       {
         title: "AI 차량 어시스턴트 - 길동이",
