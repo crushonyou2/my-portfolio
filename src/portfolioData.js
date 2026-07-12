@@ -5,7 +5,7 @@ export const portfolio = {
   role: { ko: "백엔드 기반 IT 엔지니어", en: "Backend-focused IT Engineer" },
   ui: {
     about: { ko: "소개", en: "About" }, projects: { ko: "프로젝트", en: "Projects" }, credentials: { ko: "이력", en: "Credentials" }, contact: { ko: "연락", en: "Contact" },
-    viewWork: { ko: "대표 프로젝트 보기", en: "View selected work" }, languageLabel: { ko: "영문으로 보기", en: "View in Korean" },
+    viewWork: { ko: "대표 프로젝트 보기", en: "View selected work" }, resume: { ko: "포트폴리오 PDF", en: "Portfolio PDF" }, skipToContent: { ko: "본문으로 바로가기", en: "Skip to content" }, languageLabel: { ko: "영문으로 보기", en: "View in Korean" },
   },
   hero: {
     eyebrow: { ko: "BACKEND · DATA · CLOUD", en: "BACKEND · DATA · CLOUD" },

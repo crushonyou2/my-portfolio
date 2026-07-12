@@ -20,9 +20,10 @@ function App() {
   }, [lang]);
 
   return (
-    <div className="min-h-screen bg-ink-950 text-slate-100">
+    <div className="portfolio-app">
+      <a className="skip-link" href="#main-content">{t(portfolio.ui.skipToContent)}</a>
       <Nav lang={lang} setLang={setLang} t={t} />
-      <main>
+      <main id="main-content">
         <section id="top" className="hero-grid section-shell pt-16 sm:pt-24">
           <motion.div {...reveal} className="max-w-3xl">
             <p className="eyebrow">{t(portfolio.hero.eyebrow)}</p>
@@ -33,15 +34,15 @@ function App() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#projects" className="button button-primary">{t(portfolio.ui.viewWork)}</a>
-              <a href={`mailto:${portfolio.contact.email}`} className="button button-secondary">{t(portfolio.ui.contact)}</a>
+              <a href={publicAsset("/jigwan-joe-portfolio-2026.pdf")} target="_blank" rel="noreferrer" className="button button-secondary">{t(portfolio.ui.resume)} ↗</a>
               <a href={portfolio.contact.github} target="_blank" rel="noreferrer" className="button button-ghost">GitHub ↗</a>
             </div>
-            <p className="mt-7 flex items-center gap-2 text-sm text-slate-400"><span className="status-dot" aria-hidden="true" />{t(portfolio.hero.target)}</p>
+            <p className="hero-target mt-7 flex items-center gap-2 text-sm"><span className="status-dot" aria-hidden="true" />{t(portfolio.hero.target)}</p>
           </motion.div>
           <motion.aside {...reveal} transition={{ ...reveal.transition, delay: 0.08 }} className="profile-card">
             <div className="flex items-center gap-4">
               <img src={profileImage} alt={t(portfolio.hero.photoAlt)} className="h-20 w-20 rounded-2xl object-cover" />
-              <div><p className="text-xl font-bold text-white">{t(portfolio.name)}</p><p className="mt-1 text-sm text-slate-400">{t(portfolio.role)}</p></div>
+              <div><p className="profile-name text-xl font-bold">{t(portfolio.name)}</p><p className="profile-role mt-1 text-sm">{t(portfolio.role)}</p></div>
             </div>
             <div className="mt-6 grid grid-cols-2 gap-3">
               {portfolio.hero.quickFacts.map((fact) => <div key={t(fact.label)} className="mini-fact"><strong>{t(fact.value)}</strong><span>{t(fact.label)}</span></div>)}
@@ -70,7 +71,7 @@ function App() {
           <SectionHeading eyebrow={t(portfolio.projects.eyebrow)} title={t(portfolio.projects.title)} copy={t(portfolio.projects.copy)} />
           <div className="mt-12 space-y-7">{portfolio.projects.featured.map((project, index) => <CaseStudy key={project.title} project={project} index={index} t={t} />)}</div>
           <motion.div {...reveal} className="mt-12">
-            <p className="eyebrow">{t(portfolio.projects.moreEyebrow)}</p><h3 className="mt-2 text-2xl font-bold text-white">{t(portfolio.projects.moreTitle)}</h3>
+            <p className="eyebrow">{t(portfolio.projects.moreEyebrow)}</p><h3 className="more-title mt-2 text-2xl font-bold">{t(portfolio.projects.moreTitle)}</h3>
             <div className="mt-6 grid gap-4 md:grid-cols-2">
               {portfolio.projects.more.map((project) => <ArchiveProject key={project.title} project={project} t={t} />)}
             </div>
@@ -91,23 +92,23 @@ function App() {
         <section id="contact" className="section-shell pb-20 pt-24 sm:pb-28">
           <motion.div {...reveal} className="contact-panel">
             <div><p className="eyebrow">{t(portfolio.contact.eyebrow)}</p><h2>{t(portfolio.contact.title)}</h2><p>{t(portfolio.contact.copy)}</p></div>
-            <div className="flex flex-wrap gap-3 lg:justify-end"><a href={`mailto:${portfolio.contact.email}`} className="button button-primary">{portfolio.contact.email}</a><a href={portfolio.contact.github} target="_blank" rel="noreferrer" className="button button-secondary">GitHub ↗</a></div>
+            <div className="flex flex-wrap gap-3 lg:justify-end"><a href={`mailto:${portfolio.contact.email}`} className="button button-primary">{portfolio.contact.email}</a><a href={publicAsset("/jigwan-joe-portfolio-2026.pdf")} target="_blank" rel="noreferrer" className="button button-secondary">{t(portfolio.ui.resume)} ↗</a><a href={portfolio.contact.github} target="_blank" rel="noreferrer" className="button button-secondary">GitHub ↗</a></div>
           </motion.div>
         </section>
       </main>
-      <footer className="border-t border-white/10 py-8"><div className="section-shell flex flex-col gap-2 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between"><span>© 2026 {t(portfolio.name)}</span><span>{t(portfolio.footer)}</span></div></footer>
+      <footer className="site-footer py-8"><div className="section-shell flex flex-col gap-2 text-sm sm:flex-row sm:items-center sm:justify-between"><span>© 2026 {t(portfolio.name)}</span><span>{t(portfolio.footer)}</span></div></footer>
     </div>
   );
 }
 
 function Nav({ lang, setLang, t }) {
-  return <nav className="sticky top-0 z-50 border-b border-white/10 bg-ink-950/85 backdrop-blur-xl"><div className="section-shell flex h-16 items-center justify-between"><a href="#top" className="font-black tracking-tight text-white">JIGWAN.J</a><div className="flex items-center gap-4 text-sm text-slate-400 sm:gap-7"><a href="#about" className="nav-link hidden sm:inline">{t(portfolio.ui.about)}</a><a href="#projects" className="nav-link">{t(portfolio.ui.projects)}</a><a href="#credentials" className="nav-link hidden sm:inline">{t(portfolio.ui.credentials)}</a><a href="#contact" className="nav-link">{t(portfolio.ui.contact)}</a><button onClick={() => setLang(lang === "ko" ? "en" : "ko")} className="lang-button" aria-label={t(portfolio.ui.languageLabel)}>{lang === "ko" ? "EN" : "KO"}</button></div></div></nav>;
+  return <nav className="site-nav sticky top-0 z-50 backdrop-blur-xl"><div className="section-shell flex h-16 items-center justify-between"><a href="#top" className="brand-mark">JIGWAN JOE</a><div className="nav-links flex items-center gap-4 text-sm sm:gap-7"><a href="#about" className="nav-link hidden sm:inline">{t(portfolio.ui.about)}</a><a href="#projects" className="nav-link">{t(portfolio.ui.projects)}</a><a href="#credentials" className="nav-link hidden sm:inline">{t(portfolio.ui.credentials)}</a><a href="#contact" className="nav-link">{t(portfolio.ui.contact)}</a><button onClick={() => setLang(lang === "ko" ? "en" : "ko")} className="lang-button" aria-label={t(portfolio.ui.languageLabel)}>{lang === "ko" ? "EN" : "KO"}</button></div></div></nav>;
 }
 
 function SectionHeading({ eyebrow, title, copy }) { return <motion.div {...reveal} className="max-w-3xl"><p className="eyebrow">{eyebrow}</p><h2 className="section-title">{title}</h2><p className="section-copy">{copy}</p></motion.div>; }
 
 function CaseStudy({ project, index, t }) {
-  return <motion.article {...reveal} className="case-study">
+  return <motion.article {...reveal} className={`case-study project-${index + 1}`}>
     <div className="case-summary"><div className="flex items-center justify-between gap-3"><span className="case-index">0{index + 1} / {t(project.type)}</span><span className="text-sm text-slate-500">{project.period}</span></div><h3>{project.title}</h3><p className="case-lead">{t(project.lead)}</p><div className="mt-5 flex flex-wrap gap-2">{project.tech.map((tech) => <span key={tech} className="tech-tag">{tech}</span>)}</div><div className="mt-7 flex flex-wrap gap-3">{project.links.map((link, linkIndex) => <a key={link.href} href={link.href} target="_blank" rel="noreferrer" className={linkIndex === 0 ? "text-link primary-link" : "text-link"}>{t(link.label)} ↗</a>)}</div><ProjectMedia media={project.media} t={t} /></div>
     <div className="case-details">{project.details.map((detail) => <div key={t(detail.label)} className="detail-row"><span>{t(detail.label)}</span><p>{t(detail.copy)}</p></div>)}<div className="result-grid">{project.results.map((result) => <div key={t(result.label)}><strong>{t(result.value)}</strong><span>{t(result.label)}</span></div>)}</div></div>
   </motion.article>;
