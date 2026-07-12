@@ -1,179 +1,140 @@
-import React, { useState } from 'react';
-import About from './components/About';
-import Info from './components/Info';
-import { motion, AnimatePresence } from "framer-motion";
-import Contact from './components/Contact';
-import Nav from './components/Nav';
-import Hero from './components/Hero';
-import { content, pick } from './content';
-import { useLang } from './useLang';
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import profileImage from "./assets/profile.jpg";
+import { portfolio, pick } from "./portfolioData";
+
+const reveal = {
+  initial: { opacity: 0, y: 22 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.15 },
+  transition: { duration: 0.5, ease: "easeOut" },
+};
+const publicAsset = (src) => `${process.env.PUBLIC_URL}${src}`;
 
 function App() {
-  const lang = useLang();
-  const [showOthers, setShowOthers] = useState(false);
-  const p = content.projects;
+  const [lang, setLang] = useState("ko");
+  const t = (value) => pick(value, lang);
+
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800">
-      <Nav />
-      <Hero />
-      <div className="p-6 space-y-10">
-      <About />
-      <Info />
+    <div className="min-h-screen bg-ink-950 text-slate-100">
+      <Nav lang={lang} setLang={setLang} t={t} />
+      <main>
+        <section id="top" className="hero-grid section-shell pt-16 sm:pt-24">
+          <motion.div {...reveal} className="max-w-3xl">
+            <p className="eyebrow">{t(portfolio.hero.eyebrow)}</p>
+            <h1 className="display-title mt-5">{t(portfolio.hero.title)}</h1>
+            <p className="hero-summary mt-6 text-lg leading-8 text-slate-300 sm:text-xl">
+              <span>{t(portfolio.hero.summaryLead)}</span>
+              <span className="hero-summary-tail">{t(portfolio.hero.summaryTail)}</span>
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href="#projects" className="button button-primary">{t(portfolio.ui.viewWork)}</a>
+              <a href={`mailto:${portfolio.contact.email}`} className="button button-secondary">{t(portfolio.ui.contact)}</a>
+              <a href={portfolio.contact.github} target="_blank" rel="noreferrer" className="button button-ghost">GitHub ↗</a>
+            </div>
+            <p className="mt-7 flex items-center gap-2 text-sm text-slate-400"><span className="status-dot" aria-hidden="true" />{t(portfolio.hero.target)}</p>
+          </motion.div>
+          <motion.aside {...reveal} transition={{ ...reveal.transition, delay: 0.08 }} className="profile-card">
+            <div className="flex items-center gap-4">
+              <img src={profileImage} alt={t(portfolio.hero.photoAlt)} className="h-20 w-20 rounded-2xl object-cover" />
+              <div><p className="text-xl font-bold text-white">{t(portfolio.name)}</p><p className="mt-1 text-sm text-slate-400">{t(portfolio.role)}</p></div>
+            </div>
+            <div className="mt-6 grid grid-cols-2 gap-3">
+              {portfolio.hero.quickFacts.map((fact) => <div key={t(fact.label)} className="mini-fact"><strong>{t(fact.value)}</strong><span>{t(fact.label)}</span></div>)}
+            </div>
+          </motion.aside>
+        </section>
 
-      <motion.section
-        id="projects"
-        className="max-w-4xl mx-auto scroll-mt-20"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
-        <h2 className="text-2xl font-bold mb-4">{pick(p.title, lang)}</h2>
-        <div className="space-y-6">
-          {p.featured.map((project) => (
-            <Project key={project.title} project={project} lang={lang} />
-          ))}
-        </div>
-      </motion.section>
+        <section aria-label={t(portfolio.proof.title)} className="section-shell py-12 sm:py-16">
+          <motion.div {...reveal} className="proof-grid">
+            {portfolio.proof.items.map((item) => <div key={t(item.label)} className="proof-item"><strong>{t(item.value)}</strong><span>{t(item.label)}</span></div>)}
+          </motion.div>
+        </section>
 
-      <motion.section
-        className="max-w-4xl mx-auto"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-      >
-        <div className="mt-10">
-          <button
-            className="text-blue-600 hover:underline text-sm"
-            onClick={() => setShowOthers(!showOthers)}
-          >
-            {showOthers ? pick(p.toggleClose, lang) : pick(p.toggleOpen, lang)}
-          </button>
-        </div>
+        <section id="about" className="section-shell section-gap">
+          <SectionHeading eyebrow={t(portfolio.about.eyebrow)} title={t(portfolio.about.title)} copy={t(portfolio.about.copy)} />
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+            {portfolio.about.strengths.map((strength, index) => (
+              <motion.article key={t(strength.title)} {...reveal} transition={{ ...reveal.transition, delay: index * 0.06 }} className="strength-card">
+                <span className="card-number">0{index + 1}</span><h3>{t(strength.title)}</h3><p>{t(strength.copy)}</p>
+              </motion.article>
+            ))}
+          </div>
+        </section>
 
-        <AnimatePresence>
-          {showOthers && (
-            <motion.div
-              key="others"
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
-              className="mt-4 space-y-4 text-gray-700 text-sm"
-            >
-              {p.others.map((project) => (
-                <MiniProject key={project.title} project={project} lang={lang} />
-              ))}
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.section>
+        <section id="projects" className="section-shell section-gap">
+          <SectionHeading eyebrow={t(portfolio.projects.eyebrow)} title={t(portfolio.projects.title)} copy={t(portfolio.projects.copy)} />
+          <div className="mt-12 space-y-7">{portfolio.projects.featured.map((project, index) => <CaseStudy key={project.title} project={project} index={index} t={t} />)}</div>
+          <motion.div {...reveal} className="mt-12">
+            <p className="eyebrow">{t(portfolio.projects.moreEyebrow)}</p><h3 className="mt-2 text-2xl font-bold text-white">{t(portfolio.projects.moreTitle)}</h3>
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              {portfolio.projects.more.map((project) => <ArchiveProject key={project.title} project={project} t={t} />)}
+            </div>
+          </motion.div>
+        </section>
 
-      <Contact />
-      <footer className="mt-16 text-sm text-gray-500 text-center">
-        {content.footer.text} — GitHub:{' '}
-        <a href={content.footer.githubUrl} className="underline">
-          {content.footer.githubHandle}
-        </a>
-      </footer>
-      </div>
+        <section id="credentials" className="section-shell section-gap">
+          <SectionHeading eyebrow={t(portfolio.credentials.eyebrow)} title={t(portfolio.credentials.title)} copy={t(portfolio.credentials.copy)} />
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+            {portfolio.credentials.groups.map((group) => <motion.article key={t(group.title)} {...reveal} className="credential-card"><h3>{t(group.title)}</h3><ul>{group.items.map((item) => <li key={t(item)}>{t(item)}</li>)}</ul></motion.article>)}
+          </div>
+          <motion.div {...reveal} className="skill-panel mt-5">
+            <p>{t(portfolio.credentials.skillsTitle)}</p>
+            <div className="skill-row">{portfolio.skills.map((skill) => <span key={skill}>{skill}</span>)}</div>
+          </motion.div>
+        </section>
+
+        <section id="contact" className="section-shell pb-20 pt-24 sm:pb-28">
+          <motion.div {...reveal} className="contact-panel">
+            <div><p className="eyebrow">{t(portfolio.contact.eyebrow)}</p><h2>{t(portfolio.contact.title)}</h2><p>{t(portfolio.contact.copy)}</p></div>
+            <div className="flex flex-wrap gap-3 lg:justify-end"><a href={`mailto:${portfolio.contact.email}`} className="button button-primary">{portfolio.contact.email}</a><a href={portfolio.contact.github} target="_blank" rel="noreferrer" className="button button-secondary">GitHub ↗</a></div>
+          </motion.div>
+        </section>
+      </main>
+      <footer className="border-t border-white/10 py-8"><div className="section-shell flex flex-col gap-2 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between"><span>© 2026 {t(portfolio.name)}</span><span>{t(portfolio.footer)}</span></div></footer>
     </div>
   );
 }
 
-function Project({ project, lang }) {
-  const [showPoster, setShowPoster] = useState(false);
-  const p = content.projects;
-  const poster = project.poster ? process.env.PUBLIC_URL + project.poster : null;
-
-  return (
-    <div className="bg-white p-4 rounded-xl shadow-md">
-      <div className="flex items-baseline justify-between gap-2 flex-wrap">
-        <h3 className="text-xl font-semibold">{project.title}</h3>
-        {project.period && (
-          <span className="text-sm text-gray-400">{project.period}</span>
-        )}
-      </div>
-
-      {project.tech && project.tech.length > 0 && (
-        <div className="mt-2 flex flex-wrap gap-1.5">
-          {project.tech.map((t) => (
-            <span
-              key={t}
-              className="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded"
-            >
-              {t}
-            </span>
-          ))}
-        </div>
-      )}
-
-      <p className="mt-2">
-        {pick(project.desc, lang)}
-        {project.extraLink && (
-          <>
-            <br />
-            <a
-              href={project.extraLink.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-blue-500 underline block mt-2"
-            >
-              {pick(project.extraLink.label, lang)}
-            </a>
-          </>
-        )}
-      </p>
-      {project.link && (
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-2 text-blue-600 hover:underline"
-        >
-          {pick(p.viewGithub, lang)}
-        </a>
-      )}
-
-      {poster && (
-        <div className="mt-3">
-          <button
-            onClick={() => setShowPoster(!showPoster)}
-            className="text-sm text-blue-500 hover:underline"
-          >
-            {showPoster ? pick(p.posterClose, lang) : pick(p.posterOpen, lang)}
-          </button>
-          <AnimatePresence>
-            {showPoster && (
-              <motion.img
-                key="poster"
-                src={poster}
-                alt={`${project.title} 포스터`}
-                className="mt-2 rounded-md shadow max-h-[500px] w-auto"
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.3 }}
-              />
-            )}
-          </AnimatePresence>
-        </div>
-      )}
-    </div>
-  );
+function Nav({ lang, setLang, t }) {
+  return <nav className="sticky top-0 z-50 border-b border-white/10 bg-ink-950/85 backdrop-blur-xl"><div className="section-shell flex h-16 items-center justify-between"><a href="#top" className="font-black tracking-tight text-white">JIGWAN.J</a><div className="flex items-center gap-4 text-sm text-slate-400 sm:gap-7"><a href="#about" className="nav-link hidden sm:inline">{t(portfolio.ui.about)}</a><a href="#projects" className="nav-link">{t(portfolio.ui.projects)}</a><a href="#credentials" className="nav-link hidden sm:inline">{t(portfolio.ui.credentials)}</a><a href="#contact" className="nav-link">{t(portfolio.ui.contact)}</a><button onClick={() => setLang(lang === "ko" ? "en" : "ko")} className="lang-button" aria-label={t(portfolio.ui.languageLabel)}>{lang === "ko" ? "EN" : "KO"}</button></div></div></nav>;
 }
 
-function MiniProject({ project, lang }) {
-  return (
-    <div className="border-l-4 border-blue-300 pl-3">
-      <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 font-semibold hover:underline">
-        {project.title}
-      </a>
-      <p>{pick(project.desc, lang)}</p>
-    </div>
-  );
+function SectionHeading({ eyebrow, title, copy }) { return <motion.div {...reveal} className="max-w-3xl"><p className="eyebrow">{eyebrow}</p><h2 className="section-title">{title}</h2><p className="section-copy">{copy}</p></motion.div>; }
+
+function CaseStudy({ project, index, t }) {
+  return <motion.article {...reveal} className="case-study">
+    <div className="case-summary"><div className="flex items-center justify-between gap-3"><span className="case-index">0{index + 1} / {t(project.type)}</span><span className="text-sm text-slate-500">{project.period}</span></div><h3>{project.title}</h3><p className="case-lead">{t(project.lead)}</p><div className="mt-5 flex flex-wrap gap-2">{project.tech.map((tech) => <span key={tech} className="tech-tag">{tech}</span>)}</div><div className="mt-7 flex flex-wrap gap-3">{project.links.map((link, linkIndex) => <a key={link.href} href={link.href} target="_blank" rel="noreferrer" className={linkIndex === 0 ? "text-link primary-link" : "text-link"}>{t(link.label)} ↗</a>)}</div><ProjectMedia media={project.media} t={t} /></div>
+    <div className="case-details">{project.details.map((detail) => <div key={t(detail.label)} className="detail-row"><span>{t(detail.label)}</span><p>{t(detail.copy)}</p></div>)}<div className="result-grid">{project.results.map((result) => <div key={t(result.label)}><strong>{t(result.value)}</strong><span>{t(result.label)}</span></div>)}</div></div>
+  </motion.article>;
+}
+
+function ProjectMedia({ media, t }) {
+  const [open, setOpen] = useState(false);
+  if (!media) return null;
+
+  if (media.type === "gallery") {
+    return <div className="project-gallery" aria-label={t(media.label)}>{media.images.map((item) => <img key={item.src} src={publicAsset(item.src)} alt={t(item.alt)} loading="lazy" />)}</div>;
+  }
+
+  if (media.type === "image") {
+    return <figure className="project-evidence"><img src={publicAsset(media.src)} alt={t(media.alt)} loading="lazy" /><figcaption>{t(media.caption)}</figcaption></figure>;
+  }
+
+  return <div className="poster-toggle"><button type="button" onClick={() => setOpen(!open)} aria-expanded={open}>{open ? t(portfolio.projects.posterClose) : t(portfolio.projects.posterOpen)}</button>{open && <img src={publicAsset(media.src)} alt={t(media.alt)} loading="lazy" />}</div>;
+}
+
+function ArchiveProject({ project, t }) {
+  const [open, setOpen] = useState(false);
+  if (!project.media && project.link) {
+    return <a href={project.link} target="_blank" rel="noreferrer" className="archive-card"><div><span>{project.type}</span><h4>{project.title}</h4><p>{t(project.copy)}</p></div><span aria-hidden="true" className="archive-arrow">↗</span></a>;
+  }
+
+  return <article className={`archive-card archive-card-static ${open ? "media-open" : ""}`}><div><span>{project.type}</span><h4>{project.title}</h4><p>{t(project.copy)}</p>{project.media && <button type="button" className="archive-media-button" onClick={() => setOpen(!open)} aria-expanded={open}>{open ? t(portfolio.projects.posterClose) : t(portfolio.projects.posterOpen)}</button>}</div>{open && project.media && <img className="archive-poster" src={publicAsset(project.media.src)} alt={t(project.media.alt)} loading="lazy" />}</article>;
 }
 
 export default App;
