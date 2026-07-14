@@ -2,17 +2,17 @@ export const pick = (value, lang) => value && typeof value === "object" && !Arra
 
 export const portfolio = {
   name: { ko: "조지관", en: "Jigwan Joe" },
-  role: { ko: "백엔드 기반 IT 엔지니어", en: "Backend-focused IT Engineer" },
+  role: { ko: "IT 시스템·서비스 품질 엔지니어", en: "IT Systems & Service Quality Engineer" },
   ui: {
     about: { ko: "소개", en: "About" }, projects: { ko: "프로젝트", en: "Projects" }, credentials: { ko: "이력", en: "Credentials" }, contact: { ko: "연락", en: "Contact" },
     viewWork: { ko: "대표 프로젝트 보기", en: "View selected work" }, resume: { ko: "포트폴리오 PDF", en: "Portfolio PDF" }, skipToContent: { ko: "본문으로 바로가기", en: "Skip to content" }, languageLabel: { ko: "영문으로 보기", en: "View in Korean" },
   },
   hero: {
-    eyebrow: { ko: "BACKEND · DATA · CLOUD", en: "BACKEND · DATA · CLOUD" },
-    title: { ko: "기술을 연결해, 실제로 운영되는 서비스까지 만듭니다.", en: "I connect the pieces and ship services that work in the real world." },
-    summaryLead: { ko: "Spring Boot 백엔드와 데이터 설계를 중심으로,", en: "Focused on Spring Boot backends and data design," },
-    summaryTail: { ko: "배포 자동화와 제품 출시까지 직접 완주해 온 신입 엔지니어입니다.", en: "with hands-on ownership through deployment automation and product launch." },
-    target: { ko: "IT시스템 · SI · 백엔드 포지션을 찾고 있습니다.", en: "Open to IT systems, SI, and backend engineering roles." },
+    eyebrow: { ko: "SYSTEMS · DATA · SERVICE QUALITY", en: "SYSTEMS · DATA · SERVICE QUALITY" },
+    title: { ko: "운영되는 서비스를 측정하고, 문제를 끝까지 개선합니다.", en: "I measure live services and improve problems through resolution." },
+    summaryLead: { ko: "데이터 흐름과 시스템 운영, 서비스 품질을 함께 보며,", en: "I work across data flows, system operations, and service quality," },
+    summaryTail: { ko: "검증·배포·제품 출시까지 직접 완주해 온 신입 엔지니어입니다.", en: "with hands-on ownership through validation, deployment, and product launch." },
+    target: { ko: "IT시스템·클라우드 운영 · QA/TestOps · 데이터 운영 포지션을 찾고 있습니다.", en: "Open to IT systems and cloud operations, QA/TestOps, and data operations roles." },
     photoAlt: { ko: "조지관 프로필 사진", en: "Portrait of Jigwan Joe" },
     quickFacts: [
       { value: "4.04 / 4.5", label: { ko: "학점", en: "GPA" } }, { value: "2026.02", label: { ko: "컴퓨터공학부 졸업", en: "Computer Engineering" } },
@@ -25,11 +25,11 @@ export const portfolio = {
   ] },
   about: {
     eyebrow: { ko: "HOW I WORK", en: "HOW I WORK" }, title: { ko: "넓게 경험하되, 결과는 끝까지 책임집니다.", en: "Broad in perspective, accountable for outcomes." },
-    copy: { ko: "백엔드 한 영역에 머무르지 않고 데이터 흐름, 배포 환경, 실제 사용자의 경험을 함께 봅니다. 아래 세 가지 방식으로 프로젝트를 완성해 왔습니다.", en: "I look beyond backend code to the data flow, deployment environment, and real user experience. Three habits shape how I deliver projects." },
+    copy: { ko: "기능 구현에 머무르지 않고 데이터 흐름, 배포 환경, 테스트와 실제 사용자 경험을 함께 봅니다. 아래 세 가지 방식으로 프로젝트를 완성해 왔습니다.", en: "I look beyond feature implementation to data flows, deployment environments, testing, and real user experience. Three habits shape how I deliver projects." },
     strengths: [
       { title: { ko: "측정하고 개선합니다", en: "Measure, then improve" }, copy: { ko: "RAG 검색 품질을 평가셋으로 수치화하고, 리랭킹 전후를 비교해 개선 효과를 검증했습니다.", en: "I quantified RAG retrieval quality with an evaluation set and verified the impact of reranking." } },
       { title: { ko: "경계를 명확히 설계합니다", en: "Design clear boundaries" }, copy: { ko: "Spring Boot 비즈니스 API와 Python ML 서비스를 분리하고, 팀 프로젝트에서는 담당 범위와 인터페이스를 분명히 했습니다.", en: "I separated business APIs from ML services and kept ownership boundaries explicit in team projects." } },
-      { title: { ko: "출시 이후까지 생각합니다", en: "Think beyond the build" }, copy: { ko: "CI/CD, 온디바이스 개인정보 보호, 백그라운드 동작까지 챙기며 실제 배포·운영 가능한 상태를 목표로 합니다.", en: "I account for CI/CD, on-device privacy, and background behavior with real deployment in mind." } },
+      { title: { ko: "운영과 품질까지 책임집니다", en: "Own operations and quality" }, copy: { ko: "CI/CD, 테스트, 온디바이스 개인정보 보호와 백그라운드 동작까지 챙기며 실제 배포·운영 가능한 상태를 목표로 합니다.", en: "I account for CI/CD, testing, on-device privacy, and background behavior with real deployment in mind." } },
     ],
   },
   projects: {
@@ -99,6 +99,6 @@ export const portfolio = {
     ],
   },
   skills: ["Java", "Spring Boot", "REST API", "MongoDB", "MySQL", "Python", "FastAPI", "AWS", "Cloud Run", "Docker", "GitHub Actions", "React", "Kotlin", "RAG"],
-  contact: { eyebrow: { ko: "LET'S TALK", en: "LET'S TALK" }, title: { ko: "함께 운영할 서비스를 찾고 있습니다.", en: "I'm looking for a service to help build and operate." }, copy: { ko: "백엔드·IT시스템·SI 포지션에 관심이 있습니다. 프로젝트나 포지션에 대해 편하게 연락해 주세요.", en: "I'm interested in backend, IT systems, and SI roles. Feel free to reach out about a project or position." }, email: "jigwan.joe@gmail.com", github: "https://github.com/crushonyou2" },
-  footer: { ko: "끝까지 동작하게 만드는 엔지니어", en: "An engineer who makes things work end-to-end" },
+  contact: { eyebrow: { ko: "LET'S TALK", en: "LET'S TALK" }, title: { ko: "함께 안정적으로 운영할 서비스를 찾고 있습니다.", en: "I'm looking for a service to operate reliably." }, copy: { ko: "IT시스템·클라우드 운영, QA/TestOps, 데이터 운영 포지션에 관심이 있습니다. 프로젝트나 포지션에 대해 편하게 연락해 주세요.", en: "I'm interested in IT systems and cloud operations, QA/TestOps, and data operations roles. Feel free to reach out about a project or position." }, email: "jigwan.joe@gmail.com", github: "https://github.com/crushonyou2" },
+  footer: { ko: "측정하고 끝까지 개선하는 엔지니어", en: "An engineer who measures and improves end-to-end" },
 };
