@@ -34,15 +34,14 @@ function App() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#projects" className="button button-primary">{t(portfolio.ui.viewWork)}</a>
-              <a href={publicAsset("/jigwan-joe-portfolio-2026.pdf")} target="_blank" rel="noreferrer" className="button button-secondary">{t(portfolio.ui.resume)} ↗</a>
               <a href={portfolio.contact.github} target="_blank" rel="noreferrer" className="button button-ghost">GitHub ↗</a>
             </div>
             <p className="hero-target mt-7 flex items-center gap-2 text-sm"><span className="status-dot" aria-hidden="true" />{t(portfolio.hero.target)}</p>
           </motion.div>
           <motion.aside {...reveal} transition={{ ...reveal.transition, delay: 0.08 }} className="profile-card">
-            <div className="flex items-center gap-4">
-              <img src={profileImage} alt={t(portfolio.hero.photoAlt)} className="h-20 w-20 rounded-2xl object-cover" />
-              <div><p className="profile-name text-xl font-bold">{t(portfolio.name)}</p><p className="profile-role mt-1 text-sm">{t(portfolio.role)}</p></div>
+            <div className="profile-intro">
+              <img src={profileImage} alt={t(portfolio.hero.photoAlt)} className="profile-photo" />
+              <div className="profile-copy"><p className="profile-name text-xl font-bold">{t(portfolio.name)}</p><p className="profile-role mt-1 text-sm">{t(portfolio.role)}</p></div>
             </div>
             <div className="mt-6 grid grid-cols-2 gap-3">
               {portfolio.hero.quickFacts.map((fact) => <div key={t(fact.label)} className="mini-fact"><strong>{t(fact.value)}</strong><span>{t(fact.label)}</span></div>)}
@@ -50,7 +49,7 @@ function App() {
           </motion.aside>
         </section>
 
-        <section aria-label={t(portfolio.proof.title)} className="section-shell py-12 sm:py-16">
+        <section aria-label={t(portfolio.proof.title)} className="proof-section section-shell">
           <motion.div {...reveal} className="proof-grid">
             {portfolio.proof.items.map((item) => <div key={t(item.label)} className="proof-item"><strong>{t(item.value)}</strong><span>{t(item.label)}</span></div>)}
           </motion.div>
@@ -85,7 +84,9 @@ function App() {
           </div>
           <motion.div {...reveal} className="skill-panel mt-5">
             <p>{t(portfolio.credentials.skillsTitle)}</p>
-            <div className="skill-row">{portfolio.skills.map((skill) => <span key={skill}>{skill}</span>)}</div>
+            <div className="skill-groups">
+              {portfolio.skills.map((group) => <div className="skill-group" key={t(group.title)}><h3>{t(group.title)}</h3><div className="skill-row">{group.items.map((skill) => <span key={skill}>{skill}</span>)}</div></div>)}
+            </div>
           </motion.div>
         </section>
 
@@ -109,7 +110,7 @@ function SectionHeading({ eyebrow, title, copy }) { return <motion.div {...revea
 
 function CaseStudy({ project, index, t }) {
   return <motion.article {...reveal} className={`case-study project-${index + 1}`}>
-    <div className="case-summary"><div className="flex items-center justify-between gap-3"><span className="case-index">0{index + 1} / {t(project.type)}</span><span className="text-sm text-slate-500">{project.period}</span></div><h3>{project.title}</h3><p className="case-lead">{t(project.lead)}</p><div className="mt-5 flex flex-wrap gap-2">{project.tech.map((tech) => <span key={tech} className="tech-tag">{tech}</span>)}</div><div className="mt-7 flex flex-wrap gap-3">{project.links.map((link, linkIndex) => <a key={link.href} href={link.href} target="_blank" rel="noreferrer" className={linkIndex === 0 ? "text-link primary-link" : "text-link"}>{t(link.label)} ↗</a>)}</div><ProjectMedia media={project.media} t={t} /></div>
+    <div className="case-summary"><div className="case-meta"><span className="case-index">0{index + 1} / {t(project.type)}</span><span className="case-period">{project.period}</span></div><h3>{project.titleLines ? project.titleLines.map((line) => <span key={t(line)}>{t(line)}</span>) : project.title}</h3><p className="case-lead">{t(project.lead)}</p><div className="mt-5 flex flex-wrap gap-2">{project.tech.map((tech) => <span key={tech} className="tech-tag">{tech}</span>)}</div><div className="mt-7 flex flex-wrap gap-3">{project.links.map((link, linkIndex) => <a key={link.href} href={link.href} target="_blank" rel="noreferrer" className={linkIndex === 0 ? "text-link primary-link" : "text-link"}>{t(link.label)} ↗</a>)}</div><ProjectMedia media={project.media} t={t} /></div>
     <div className="case-details">{project.details.map((detail) => <div key={t(detail.label)} className="detail-row"><span>{t(detail.label)}</span><p>{t(detail.copy)}</p></div>)}<div className="result-grid">{project.results.map((result) => <div key={t(result.label)}><strong>{t(result.value)}</strong><span>{t(result.label)}</span></div>)}</div></div>
   </motion.article>;
 }
