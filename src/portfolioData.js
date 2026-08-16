@@ -21,7 +21,7 @@ export const portfolio = {
   },
   proof: { title: { ko: "핵심 성과", en: "Key outcomes" }, items: [
     { value: "2,631", label: { ko: "공공 정책 데이터 수집·정제", en: "public-policy records processed" } }, { value: "+12%p", label: { ko: "RAG 1순위 정답률 개선", en: "RAG top-1 accuracy lift" } },
-    { value: { ko: "출시 완료", en: "Shipped" }, label: { ko: "개인 Android 앱 · 원스토어", en: "solo Android app · ONE Store" } }, { value: { ko: "수상 2회", en: "2 awards" }, label: { ko: "캡스톤 은상 · 대학생 논문경진대회 우수논문상", en: "Capstone Silver Prize · Best Paper Award" } },
+    { value: { ko: "배포 2건", en: "2 releases" }, label: { ko: "개인 Android 앱 · 원스토어", en: "solo Android app · ONE Store" } }, { value: { ko: "수상 2회", en: "2 awards" }, label: { ko: "캡스톤 은상 · 대학생 논문경진대회 우수논문상", en: "Capstone Silver Prize · Best Paper Award" } },
   ] },
   about: {
     eyebrow: { ko: "HOW I WORK", en: "HOW I WORK" }, title: { ko: "기술을 넓게 연결하고, 결과는 끝까지 책임집니다.", en: "Connect the stack, own the outcome." },
@@ -64,16 +64,17 @@ export const portfolio = {
         media: { type: "poster", src: "/gildongE_poster.jpg", alt: { ko: "길동이 프로젝트 포스터", en: "GildongE project poster" } },
       },
       {
-        title: "오늘도 신선", type: { ko: "개인 · Android 출시", en: "Solo · Android launch" }, period: "2025.09 — 2025.12",
+        title: "오늘도 신선", type: { ko: "개인 · Android 출시·운영", en: "Solo · Android launch & operation" }, period: "2025.09 — 2026.08",
         lead: { ko: "식품 유통기한 입력의 번거로움을 OCR로 줄이고, 개인정보를 서버로 보내지 않는 Android 앱을 기획부터 출시까지 완주했습니다.", en: "I took an Android app from concept to store launch, using OCR to simplify expiry-date entry while keeping personal data off servers." },
         tech: ["Kotlin", "Jetpack Compose", "Room", "WorkManager", "ML Kit OCR", "MVVM"],
         details: [
           { label: { ko: "문제", en: "Problem" }, copy: { ko: "기존 앱은 수동 입력이 번거롭고 인터넷 연결·개인정보 수집에 대한 부담이 있었습니다.", en: "Existing apps relied on tedious manual input and raised concerns around connectivity and personal data." } },
           { label: { ko: "기여", en: "Ownership" }, copy: { ko: "OCR 전처리, Room 기반 로컬 저장, WorkManager 알림, 소비 통계, 위젯과 백업·복원을 단독 구현했습니다.", en: "I built OCR preprocessing, Room storage, WorkManager notifications, statistics, widgets, and backup/restore." } },
           { label: { ko: "판단", en: "Decision" }, copy: { ko: "모든 데이터를 기기 안에서 처리하고 서버 전송을 없애 프라이버시와 오프라인 사용성을 우선했습니다.", en: "I kept all processing on-device, eliminating server transfer to prioritize privacy and offline usability." } },
-          { label: { ko: "품질 검증", en: "Quality gate" }, copy: { ko: "공개 61장 동일 표본 회귀에서 정확 일치율을 4.92%에서 37.70%(+32.78%p)로 개선하고 기존 정답 회귀 0건을 확인했습니다. 한국 보완 20장은 65%에 그쳐 v1.1 배포를 No-Go로 판정했습니다.", en: "On the same 61-image regression set, exact match improved from 4.92% to 37.70% (+32.78pp) with zero regressions among previous correct results. A 20-image Korean set reached 65%, so I marked v1.1 as No-Go." } },
+          { label: { ko: "품질 검증", en: "Quality gate" }, copy: { ko: "독립 한국 라벨 55장으로 동일 표본 회귀 환경을 만들어 D-30 시나리오 기준 정확 일치율을 67.27%에서 72.73%로 올리고, 단위 테스트 29건·계측 테스트 15건을 배포 조건으로 걸었습니다. 게이트를 모두 통과하고도 오답 15장이 남아 후속 버전 배포를 보류했습니다.", en: "I built a fixed-sample regression set of 55 independent Korean labels, raised exact-match from 67.27% to 72.73% under the D-30 scenario, and gated releases on 29 unit and 15 instrumented tests. Every gate passed, yet 15 labels were still wrong, so I held the next release." } },
+          { label: { ko: "그 다음", en: "What followed" }, copy: { ko: "정확도를 더 올리는 대신 인식한 날짜를 사용자가 확인해야 저장되도록 구조를 바꿔 잘못 읽힌 값이 저장되는 경로를 없애고, v1.0.2로 다시 출시했습니다. 공개 배포 이력은 2건입니다.", en: "Instead of chasing accuracy, I made recognised dates require user confirmation before saving, removing the path where a misread date could be stored, and shipped v1.0.2. The app has two public releases." } },
         ],
-        results: [{ value: "+32.78%p", label: { ko: "61장 정확 일치율 개선", en: "exact-match lift on 61 images" } }, { value: "17건", label: { ko: "단위 테스트·품질 게이트 통과", en: "unit tests plus quality gates" } }, { value: "No-Go", label: { ko: "v1.1 배포 판정", en: "v1.1 release decision" } }],
+        results: [{ value: "67.27% → 72.73%", label: { ko: "한국 라벨 55장 D-30 정확 일치율", en: "exact match, 55 Korean labels (D-30)" } }, { value: "29 + 15", label: { ko: "단위·계측 테스트 통과", en: "unit and instrumented tests" } }, { value: { ko: "배포 2건", en: "2 releases" }, label: { ko: "보류 후 원인 해결해 재출시", en: "held, fixed the cause, shipped again" } }],
         links: [{ href: "https://m.onestore.co.kr/v2/ko-kr/app/0001003331", label: { ko: "스토어에서 보기", en: "View in store" } }, { href: "https://github.com/crushonyou2/Fridge-D-Day", label: { ko: "코드 보기", en: "View code" } }],
         media: { type: "gallery", label: { ko: "오늘도 신선 실제 앱 화면", en: "Fresh Today app screens" }, images: [
           { src: "/today-fresh-1.png", alt: { ko: "오늘도 신선 유통기한 목록 화면", en: "Expiration list screen" } },
