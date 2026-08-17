@@ -85,7 +85,7 @@ function App() {
           <motion.div {...reveal} className="skill-panel mt-5">
             <p>{t(portfolio.credentials.skillsTitle)}</p>
             <div className="skill-groups">
-              {portfolio.skills.map((group) => <div className="skill-group" key={t(group.title)}><h3>{t(group.title)}</h3><div className="skill-row">{group.items.map((skill) => <span key={skill}>{skill}</span>)}</div></div>)}
+              {portfolio.skills.map((group) => <div className="skill-group" key={t(group.title)}><h3>{t(group.title)}</h3><div className="skill-row">{group.items.map((skill) => <span key={t(skill)}>{t(skill)}</span>)}</div></div>)}
             </div>
           </motion.div>
         </section>

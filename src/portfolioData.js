@@ -9,22 +9,24 @@ export const portfolio = {
   },
   hero: {
     eyebrow: { ko: "BACKEND · SYSTEMS · SOFTWARE QUALITY", en: "BACKEND · SYSTEMS · SOFTWARE QUALITY" },
-    title: { ko: "백엔드와 데이터를 기반으로, 서비스 품질을 측정하고 개선합니다.", en: "I build backend systems and improve software quality with measurable evidence." },
-    summaryLead: { ko: "Spring Boot 서비스 구현부터 RAG 평가, OCR 회귀 테스트, 배포 관측까지,", en: "From Spring Boot services to RAG evaluation, OCR regression tests, and deployment observability," },
-    summaryTail: { ko: "검증 가능한 결과로 완주해 온 신입 엔지니어입니다.", en: "I carry work through to measurable, verifiable outcomes." },
-    target: { ko: "IT시스템·SI · QA/TestOps · 백엔드 직무를 중심으로 지원하고 있습니다.", en: "Seeking IT systems and SI, QA/TestOps, and backend engineering roles." },
+    title: { ko: "재는 기준부터 직접 만듭니다.", en: "I build the yardstick first." },
+    summaryLead: { ko: "백엔드와 데이터로 시스템을 만들고,", en: "I build backend and data systems," },
+    summaryTail: { ko: "품질을 수치로 확인한 뒤 배포 여부를 판단합니다.", en: "then let measured quality decide what ships." },
+    target: { ko: "IT시스템·SI · QA/TestOps · 백엔드 · AI 솔루션 직무를 중심으로 지원하고 있습니다.", en: "Seeking IT systems and SI, QA/TestOps, backend, and AI solutions engineering roles." },
     photoAlt: { ko: "조지관 프로필 사진", en: "Portrait of Jigwan Joe" },
     quickFacts: [
       { value: "4.04 / 4.5", label: { ko: "학점", en: "GPA" } }, { value: "2026.02", label: { ko: "컴퓨터공학부 졸업", en: "Computer Engineering" } },
-      { value: "SQLD · ADsP", label: { ko: "데이터 자격", en: "Data certificates" } }, { value: "정보처리기사", label: { ko: "국가기술자격", en: "National certificate" } },
+      { value: { ko: "자격 5건", en: "5 certificates" }, label: { ko: "정보처리기사 · SQLD · ADsP · CSTS · 한국사 1급", en: "Info. Processing Engineer · SQLD · ADsP · CSTS · History Lv.1" } }, { value: { ko: "어학 성적", en: "Language scores" }, label: { ko: "OPIc 영어 IH · TOEIC 765", en: "OPIc English IH · TOEIC 765" } },
     ],
   },
   proof: { title: { ko: "핵심 성과", en: "Key outcomes" }, items: [
-    { value: "2,631", label: { ko: "공공 정책 데이터 수집·정제", en: "public-policy records processed" } }, { value: "+12%p", label: { ko: "RAG 1순위 정답률 개선", en: "RAG top-1 accuracy lift" } },
-    { value: { ko: "배포 2건", en: "2 releases" }, label: { ko: "개인 Android 앱 · 원스토어", en: "solo Android app · ONE Store" } }, { value: { ko: "수상 2회", en: "2 awards" }, label: { ko: "캡스톤 은상 · 대학생 논문경진대회 우수논문상", en: "Capstone Silver Prize · Best Paper Award" } },
+    { value: "40 → 52%", label: { ko: "RAG 1순위 정답률 — 평가셋 60문항으로 직접 측정", en: "RAG top-1 accuracy, measured on a 60-question set I built" } },
+    { value: { ko: "보류 → 재출시", en: "Held, then re-shipped" }, label: { ko: "회귀 게이트를 다 통과한 뒤에도 배포를 스스로 멈추고, 원인을 구조로 해결", en: "I halted my own release after every gate passed, then fixed the cause by design" } },
+    { value: { ko: "논문 2편 · 수상 2회", en: "2 papers · 2 awards" }, label: { ko: "한국정보기술학회 공저 · 캡스톤 은상 · 우수논문상", en: "KIIT co-authorship · Capstone Silver · Best Paper" } },
+    { value: { ko: "전부 공개", en: "Fully published" }, label: { ko: "평가셋·측정 스크립트·리랭킹 전후 결과를 저장소에 그대로", en: "Evaluation set, scripts, and before/after results in the repo" } },
   ] },
   about: {
-    eyebrow: { ko: "HOW I WORK", en: "HOW I WORK" }, title: { ko: "기술을 넓게 연결하고, 결과는 끝까지 책임집니다.", en: "Connect the stack, own the outcome." },
+    eyebrow: { ko: "HOW I WORK", en: "HOW I WORK" }, title: { ko: "기술을 넓게 연결하고\n결과는 끝까지 책임집니다.", en: "Connect the stack\nown the outcome." },
     copy: { ko: "백엔드 구현에 머무르지 않고 데이터 흐름, 배포 환경, 테스트와 실제 사용자 경험을 함께 봅니다. 아래 세 가지 방식으로 프로젝트를 완성해 왔습니다.", en: "I look beyond backend implementation to data flows, deployment environments, testing, and real user experience. Three habits shape how I deliver projects." },
     strengths: [
       { title: { ko: "측정하고 개선합니다", en: "Measure, then improve" }, copy: { ko: "RAG 검색 품질을 평가셋으로 수치화하고, 리랭킹 전후를 비교해 개선 효과를 검증했습니다.", en: "I quantified RAG retrieval quality with an evaluation set and verified the impact of reranking." } },
@@ -33,18 +35,18 @@ export const portfolio = {
     ],
   },
   projects: {
-    eyebrow: { ko: "SELECTED WORK", en: "SELECTED WORK" }, title: { ko: "설명보다, 판단과 결과가 보이는 프로젝트", en: "Projects that show decisions and results" },
+    eyebrow: { ko: "SELECTED WORK", en: "SELECTED WORK" }, title: { ko: "설명보다\n판단과 결과가 보이는 프로젝트", en: "Not descriptions\nbut decisions and results" },
     copy: { ko: "기술 목록보다 어떤 문제를 맡았고, 무엇을 판단했으며, 결과를 어떻게 검증했는지에 집중했습니다.", en: "Each case focuses on the problem, the decision, my ownership, and how the result was verified." },
     featured: [
       {
-        title: "혜택나침반", type: { ko: "개인 · 대표 프로젝트", en: "Solo · Flagship project" }, period: "2026.06",
+        title: "혜택나침반", type: { ko: "개인 · 대표 프로젝트", en: "Solo · Flagship project" }, period: "2026.06 — 2026.07",
         lead: { ko: "흩어진 청년정책을 자연어로 찾을 수 있도록, 데이터 수집부터 검색 품질 평가까지 직접 만든 RAG 서비스입니다.", en: "A RAG service I built end-to-end, from public-data ingestion to measured retrieval quality, so users can find youth policies in natural language." },
         tech: ["Spring Boot", "FastAPI", "pgvector", "React", "E5", "Cross-encoder"],
         details: [
           { label: { ko: "문제", en: "Problem" }, copy: { ko: "수천 개 정책이 흩어져 있고, 키워드 검색만으로는 자신에게 맞는 제도를 찾기 어려웠습니다.", en: "Thousands of policies were fragmented, and keyword search made relevant programs hard to discover." } },
           { label: { ko: "기여", en: "Ownership" }, copy: { ko: "2,631건 수집·정제, 임베딩, 벡터 검색, 리랭킹, 근거 기반 답변까지 전 파이프라인을 구현했습니다.", en: "I owned 2,631-record ingestion and cleaning, embeddings, vector search, reranking, and grounded generation." } },
-          { label: { ko: "판단", en: "Decision" }, copy: { ko: "부정확한 지역코드를 억지로 필터에 쓰지 않고 토픽 검색으로 범위를 조정했으며, 60문항 평가셋으로 리랭킹 효과를 검증했습니다.", en: "I removed an unreliable region filter, narrowed the scope to topic search, and tested reranking with a 60-question evaluation set." } },
-          { label: { ko: "운영 관측", en: "Observability" }, copy: { ko: "공개 서비스에서 콜드 요청 58.9초와 웜 검색 p50 820ms를 분리해 측정하고, 요청 ID·Prometheus 지표로 API·ML·DB 구간 관측 기반을 마련했습니다.", en: "I separated a 58.9-second cold request from an 820ms warm-search p50 and added request IDs and Prometheus metrics to observe API, ML, and database stages." } },
+          { label: { ko: "판단", en: "Decision" }, copy: { ko: "원본 데이터의 지역 코드에 다른 지역 값이 섞여 있어 지역 검색을 사용자 노출에서 제외하고 토픽 검색으로 범위를 좁혔습니다. 필터 코드는 데이터 정제 후 재검증할 수 있게 남겨 뒀고, 60문항 평가셋으로 리랭킹 효과를 검증했습니다.", en: "Region codes in the source data were mixed with values from other regions, so I took region search out of the user-facing path and narrowed the scope to topic search. The filter code stays in place for re-verification once the data is cleaned. Reranking was validated with a 60-question evaluation set." } },
+          { label: { ko: "운영 관측", en: "Observability" }, copy: { ko: "요청 ID와 Prometheus 지표로 API·ML·DB 구간을 나눠 보도록 구성했습니다. 콜드 요청과 웜 검색을 따로 재고 구간을 분해해, 느린 원인이 코드가 아니라 무료 인스턴스의 ML 스케일 업 대기라는 것을 지목했습니다.", en: "Request IDs and Prometheus metrics separate the API, ML, and database stages. Measuring cold and warm requests independently and decomposing the stages showed the latency came from ML scale-up on a free instance, not from the code." } },
         ],
         results: [{ value: "40 → 52%", label: { ko: "recall@1", en: "recall@1" } }, { value: "0.535 → 0.614", label: { ko: "MRR", en: "MRR" } }, { value: "3,083", label: { ko: "검색 청크", en: "search chunks" } }],
         links: [{ href: "https://crushonyou2.github.io/benefit-compass", label: { ko: "데모 보기", en: "View demo" } }, { href: "https://github.com/crushonyou2/benefit-compass", label: { ko: "코드 보기", en: "View code" } }],
@@ -64,13 +66,13 @@ export const portfolio = {
         media: { type: "poster", src: "/gildongE_poster.jpg", alt: { ko: "길동이 프로젝트 포스터", en: "GildongE project poster" } },
       },
       {
-        title: "오늘도 신선", type: { ko: "개인 · Android 출시·운영", en: "Solo · Android launch & operation" }, period: "2025.09 — 2026.08",
-        lead: { ko: "식품 유통기한 입력의 번거로움을 OCR로 줄이고, 개인정보를 서버로 보내지 않는 Android 앱을 기획부터 출시까지 완주했습니다.", en: "I took an Android app from concept to store launch, using OCR to simplify expiry-date entry while keeping personal data off servers." },
+        title: "오늘도 신선", type: { ko: "개인 · Android 출시·재출시", en: "Solo · Android launch and re-release" }, period: "2025.09 — 2026.08",
+        lead: { ko: "식품 유통기한 입력의 번거로움을 OCR로 줄이고, 이미지를 서버로 보내지 않는 Android 앱을 기획부터 출시·재출시까지 완주했습니다.", en: "I took an Android app from concept through launch and re-release, using OCR to simplify expiry-date entry while never sending images to a server." },
         tech: ["Kotlin", "Jetpack Compose", "Room", "WorkManager", "ML Kit OCR", "MVVM"],
         details: [
           { label: { ko: "문제", en: "Problem" }, copy: { ko: "기존 앱은 수동 입력이 번거롭고 인터넷 연결·개인정보 수집에 대한 부담이 있었습니다.", en: "Existing apps relied on tedious manual input and raised concerns around connectivity and personal data." } },
           { label: { ko: "기여", en: "Ownership" }, copy: { ko: "OCR 전처리, Room 기반 로컬 저장, WorkManager 알림, 소비 통계, 위젯과 백업·복원을 단독 구현했습니다.", en: "I built OCR preprocessing, Room storage, WorkManager notifications, statistics, widgets, and backup/restore." } },
-          { label: { ko: "판단", en: "Decision" }, copy: { ko: "모든 데이터를 기기 안에서 처리하고 서버 전송을 없애 프라이버시와 오프라인 사용성을 우선했습니다.", en: "I kept all processing on-device, eliminating server transfer to prioritize privacy and offline usability." } },
+          { label: { ko: "판단", en: "Decision" }, copy: { ko: "촬영한 이미지를 서버로 보내지 않고 기기에서 인식하도록 설계했고, 릴리스 APK에 인터넷 권한이나 사설 QA 데이터가 섞이면 빌드를 실패시키는 검증 단계를 CI에 넣어 그 설계가 배포 산출물에서 유지되는지 자동으로 확인했습니다.", en: "Images are recognized on-device and never sent to a server. A CI gate fails the build if the release APK carries internet permission or private QA data, so the design holds in the shipped artifact." } },
           { label: { ko: "품질 검증", en: "Quality gate" }, copy: { ko: "독립 한국 라벨 55장으로 동일 표본 회귀 환경을 만들어 D-30 시나리오 기준 정확 일치율을 67.27%에서 72.73%로 올리고, 단위 테스트 29건·계측 테스트 15건을 배포 조건으로 걸었습니다. 게이트를 모두 통과하고도 오답 15장이 남아 후속 버전 배포를 보류했습니다.", en: "I built a fixed-sample regression set of 55 independent Korean labels, raised exact-match from 67.27% to 72.73% under the D-30 scenario, and gated releases on 29 unit and 15 instrumented tests. Every gate passed, yet 15 labels were still wrong, so I held the next release." } },
           { label: { ko: "그 다음", en: "What followed" }, copy: { ko: "정확도를 더 올리는 대신 인식한 날짜를 사용자가 확인해야 저장되도록 구조를 바꿔 잘못 읽힌 값이 저장되는 경로를 없애고, v1.0.2로 다시 출시했습니다. 공개 배포 이력은 2건입니다.", en: "Instead of chasing accuracy, I made recognised dates require user confirmation before saving, removing the path where a misread date could be stored, and shipped v1.0.2. The app has two public releases." } },
         ],
@@ -90,7 +92,7 @@ export const portfolio = {
       { title: "쓰담", type: "YOLOv8 · Android · Robot", link: null, copy: { ko: "실시간 객체 탐지와 로봇 연동을 담당한 대화형 쓰레기통. 2024 한국정보기술학회 하계종합학술대회 대학생 논문경진대회 우수논문상(2024.05.24).", en: "Interactive trash-can robot with real-time detection and robot integration. Best Paper Award at the 2024 KIIT Summer Conference Student Paper Competition (May 24, 2024)." }, media: { src: "/ssodam_poster.jpg", alt: { ko: "쓰담 프로젝트 포스터", en: "Ssodam project poster" } } },
       { title: "movie_diary", type: "React · FastAPI · Cloud Run", link: "https://github.com/crushonyou2/movie_diary", copy: { ko: "감정 기반 영화 추천 서비스. 외부 API 연동과 서버리스 배포 자동화를 경험했습니다.", en: "Emotion-based film recommendations with third-party APIs and serverless deployment automation." } },
       { title: "Build-Your-Health", type: "JSP/Servlet · MySQL", link: "https://github.com/crushonyou2/Build-Your-Health", copy: { ko: "건강 기록부터 쇼핑·게시판·관리자 CRUD까지 단독 구현한 MVC 웹 애플리케이션.", en: "Solo MVC web app spanning health logs, commerce, community, and admin CRUD." } },
-      { title: "dynamic_scraper", type: "Flask · Playwright", link: "https://github.com/crushonyou2/dynamic_scraper", copy: { ko: "여러 채용 사이트 결과를 수집·캐싱하고 CSV로 내보내는 채용공고 크롤러.", en: "Job-posting crawler that aggregates, caches, and exports results from multiple sites." } },
+      { title: "dynamic_scraper", type: "Flask · BeautifulSoup", link: "https://github.com/crushonyou2/dynamic_scraper", copy: { ko: "여러 채용 사이트 결과를 사이트별 파서로 나눠 수집하고, 같은 키워드 재검색을 캐싱해 중복 요청을 줄인 뒤 CSV로 내보내는 크롤러.", en: "Job-posting crawler with per-site parsers, response caching to avoid duplicate requests on repeated keywords, and CSV export." } },
     ],
   },
   credentials: {
@@ -102,10 +104,10 @@ export const portfolio = {
     ],
   },
   skills: [
-    { title: { ko: "백엔드", en: "Backend" }, items: ["Java", "Spring Boot", "REST API", "JUnit"] },
-    { title: { ko: "데이터·AI", en: "Data & AI" }, items: ["PostgreSQL", "MongoDB", "Python", "FastAPI", "RAG"] },
-    { title: { ko: "배포·품질", en: "Delivery & Quality" }, items: ["Docker", "GitHub Actions", "Google Cloud Run", "GitHub Pages", "Prometheus"] },
+    { title: { ko: "언어·백엔드", en: "Languages & Backend" }, items: ["Java", "Kotlin", "Python", "Spring Boot", "FastAPI", "REST API", "JSP/Servlet"] },
+    { title: { ko: "데이터·AI", en: "Data & AI" }, items: ["PostgreSQL · pgvector", "MongoDB", "MySQL", "RAG", { ko: "임베딩·리랭킹", en: "Embedding & reranking" }] },
+    { title: { ko: "품질·배포", en: "Quality & Delivery" }, items: [{ ko: "회귀 테스트 환경", en: "Regression harness" }, { ko: "CI 품질 게이트", en: "CI quality gates" }, "JUnit", "GitHub Actions", "Docker", "Google Cloud Run", "Prometheus"] },
   ],
-  contact: { eyebrow: { ko: "LET'S TALK", en: "LET'S TALK" }, title: { ko: "안정적인 서비스를 함께 만듭니다.", en: "Let's build reliable services together." }, copy: { ko: "IT시스템·SI, QA/TestOps, 백엔드 포지션에 관심이 있습니다. 프로젝트나 포지션에 대해 편하게 연락해 주세요.", en: "I'm interested in IT systems and SI, QA/TestOps, and backend roles. Feel free to reach out about a project or position." }, email: "jigwan.joe@gmail.com", github: "https://github.com/crushonyou2" },
+  contact: { eyebrow: { ko: "LET'S TALK", en: "LET'S TALK" }, title: { ko: "안정적인 서비스를 함께 만듭니다.", en: "Let's build reliable services together." }, copy: { ko: "IT시스템·SI, QA/TestOps, 백엔드, AI 솔루션 포지션에 관심이 있습니다. 프로젝트나 포지션에 대해 편하게 연락해 주세요.", en: "I'm interested in IT systems and SI, QA/TestOps, backend, and AI solutions roles. Feel free to reach out about a project or position." }, email: "jigwan.joe@gmail.com", github: "https://github.com/crushonyou2" },
   footer: { ko: "측정하고 끝까지 개선하는 엔지니어", en: "An engineer who measures and improves end-to-end" },
 };
