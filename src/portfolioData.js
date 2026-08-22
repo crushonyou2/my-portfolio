@@ -39,7 +39,7 @@ export const portfolio = {
     copy: { ko: "기술 목록보다 어떤 문제를 맡았고, 무엇을 판단했으며, 결과를 어떻게 검증했는지에 집중했습니다.", en: "Each case focuses on the problem, the decision, my ownership, and how the result was verified." },
     featured: [
       {
-        title: "혜택나침반", type: { ko: "개인 · 대표 프로젝트", en: "Solo · Flagship project" }, period: "2026.06 — 2026.07",
+        title: "혜택나침반", titleLines: [{ ko: "혜택나침반", en: "BenefitCompass" }], type: { ko: "개인 · 대표 프로젝트", en: "Solo · Flagship project" }, period: "2026.06 — 2026.07",
         lead: { ko: "흩어진 청년정책을 자연어로 찾을 수 있도록, 데이터 수집부터 검색 품질 평가까지 직접 만든 RAG 서비스입니다.", en: "A RAG service I built end-to-end, from public-data ingestion to measured retrieval quality, so users can find youth policies in natural language." },
         tech: ["Spring Boot", "FastAPI", "pgvector", "React", "E5", "Cross-encoder"],
         details: [
@@ -53,7 +53,7 @@ export const portfolio = {
         media: { type: "image", src: "/benefit-compass-demo.png", alt: { ko: "혜택나침반의 월세 지원 검색 결과", en: "BenefitCompass search results for rental support" }, caption: { ko: "실제 배포 환경에서 확인한 검색 결과", en: "Search result captured from the live deployment" } },
       },
       {
-        title: "오늘도 신선", type: { ko: "개인 · Android 출시·재출시", en: "Solo · Android launch and re-release" }, period: "2025.09 — 2026.08",
+        title: "오늘도 신선", titleLines: [{ ko: "오늘도 신선", en: "Fridge D-Day" }], type: { ko: "개인 · Android 출시·재출시", en: "Solo · Android launch and re-release" }, period: "2025.09 — 2026.08",
         lead: { ko: "식품 유통기한 입력의 번거로움을 OCR로 줄이고, 이미지를 서버로 보내지 않는 Android 앱을 기획부터 출시·재출시까지 완주했습니다.", en: "I took an Android app from concept through launch and re-release, using OCR to simplify expiry-date entry while never sending images to a server." },
         tech: ["Kotlin", "Jetpack Compose", "Room", "WorkManager", "ML Kit OCR", "MVVM"],
         details: [
@@ -65,7 +65,7 @@ export const portfolio = {
         ],
         results: [{ value: "67.27% → 72.73%", label: { ko: "한국 라벨 55장 D-30 정확 일치율", en: "exact match, 55 Korean labels (D-30)" } }, { value: "29 + 15", label: { ko: "단위·계측 테스트 통과", en: "unit and instrumented tests" } }, { value: { ko: "배포 2건", en: "2 releases" }, label: { ko: "사용자 확인 흐름 도입 후 재출시", en: "re-shipped after adding user confirmation" } }],
         links: [{ href: "https://m.onestore.co.kr/v2/ko-kr/app/0001003331", label: { ko: "스토어에서 보기", en: "View in store" } }, { href: "https://github.com/crushonyou2/Fridge-D-Day", label: { ko: "코드 보기", en: "View code" } }, { href: "https://github.com/crushonyou2/Fridge-D-Day/blob/main/QA_RELEASE_RECORD.md", label: { ko: "QA·릴리스 기록", en: "QA & release record" } }, { href: "https://github.com/crushonyou2/Fridge-D-Day/blob/main/docs/qa/OCR_BENCHMARK.md", label: { ko: "OCR 벤치마크", en: "OCR benchmark" } }, { href: "https://github.com/crushonyou2/Fridge-D-Day/blob/main/.github/workflows/android-ci.yml", label: { ko: "CI 설정", en: "CI workflow" } }],
-        media: { type: "gallery", label: { ko: "오늘도 신선 실제 앱 화면", en: "Fresh Today app screens" }, images: [
+        media: { type: "gallery", label: { ko: "오늘도 신선 실제 앱 화면", en: "Fridge D-Day app screens" }, images: [
           { src: "/today-fresh-1.png", alt: { ko: "오늘도 신선 유통기한 목록 화면", en: "Expiration list screen" } },
           { src: "/today-fresh-2.png", alt: { ko: "오늘도 신선 OCR 촬영 화면", en: "OCR capture screen" } },
           { src: "/today-fresh-3.png", alt: { ko: "오늘도 신선 소비 통계 화면", en: "Consumption statistics screen" } },
@@ -80,7 +80,7 @@ export const portfolio = {
           { label: { ko: "기여", en: "Ownership" }, copy: { ko: "차량·차종·소모품·주행패턴·사용자 REST API와 MongoDB 모델, 카카오 사용자 조회·등록 흐름, 주간 평균 집계를 구현했습니다.", en: "I built REST APIs and MongoDB models for vehicles, models, consumables, driving patterns, and users, plus Kakao user registration and weekly aggregates." } },
           { label: { ko: "담당 범위", en: "My scope" }, copy: { ko: "7인 팀에서 차량 도메인 백엔드와 MongoDB 데이터 모델을 담당했습니다.", en: "In a seven-person team, I owned the vehicle-domain backend and MongoDB data model." } },
         ],
-        results: [{ value: "은상", label: { ko: "캡스톤디자인 경진대회", en: "Capstone Design award" } }, { value: "1편", label: { ko: "학회 논문", en: "Conference paper" } }, { value: "5개", label: { ko: "백엔드 도메인", en: "backend domains" } }],
+        results: [{ value: { ko: "은상", en: "Silver" }, label: { ko: "캡스톤디자인 경진대회", en: "Capstone Design award" } }, { value: { ko: "1편", en: "1" }, label: { ko: "학회 논문", en: "Conference paper" } }, { value: { ko: "5개", en: "5" }, label: { ko: "백엔드 도메인", en: "backend domains" } }],
         links: [{ href: "https://github.com/crushonyou2/gildongE", label: { ko: "백엔드 코드 보기", en: "View backend code" } }],
         media: { type: "poster", src: "/gildongE_poster.jpg", alt: { ko: "길동이 프로젝트 포스터", en: "GildongE project poster" } },
       },
@@ -89,7 +89,7 @@ export const portfolio = {
     posterClose: { ko: "프로젝트 포스터 닫기", en: "Hide project poster" },
     moreEyebrow: { ko: "MORE WORK", en: "MORE WORK" }, moreTitle: { ko: "다른 환경에서도 문제를 풀어봤습니다.", en: "More problems, different environments." },
     more: [
-      { title: "쓰담", type: "YOLOv8 · Android · Robot", link: null, copy: { ko: "실시간 객체 탐지와 로봇 연동을 담당한 대화형 쓰레기통. 2024 한국정보기술학회 하계종합학술대회 대학생 논문경진대회 우수논문상(2024.05.24).", en: "Interactive trash-can robot with real-time detection and robot integration. Outstanding Paper Award at the 2024 KIIT Summer Conference Student Paper Competition (May 24, 2024)." }, media: { src: "/ssodam_poster.jpg", alt: { ko: "쓰담 프로젝트 포스터", en: "Ssodam project poster" } } },
+      { title: "쓰담 (Ssodam)", type: "YOLOv8 · Android · Robot", link: null, copy: { ko: "실시간 객체 탐지와 로봇 연동을 담당한 대화형 쓰레기통. 2024 한국정보기술학회 하계종합학술대회 대학생 논문경진대회 우수논문상(2024.05.24).", en: "Interactive trash-can robot with real-time detection and robot integration. Outstanding Paper Award at the 2024 KIIT Summer Conference Student Paper Competition (May 24, 2024)." }, media: { src: "/ssodam_poster.jpg", alt: { ko: "쓰담 프로젝트 포스터", en: "Ssodam project poster" } } },
       { title: "movie_diary", type: "React · FastAPI · Cloud Run", link: "https://github.com/crushonyou2/movie_diary", copy: { ko: "감정 기반 영화 추천 서비스. 외부 API 연동과 서버리스 배포 자동화를 경험했습니다.", en: "Emotion-based film recommendations with third-party APIs and serverless deployment automation." } },
       { title: "Build-Your-Health", type: "JSP/Servlet · MySQL", link: "https://github.com/crushonyou2/Build-Your-Health", copy: { ko: "건강 기록부터 쇼핑·게시판·관리자 CRUD까지 단독 구현한 MVC 웹 애플리케이션.", en: "Solo MVC web app spanning health logs, commerce, community, and admin CRUD." } },
       { title: "dynamic_scraper", type: "Flask · BeautifulSoup", link: "https://github.com/crushonyou2/dynamic_scraper", copy: { ko: "여러 채용 사이트 결과를 사이트별 파서로 나눠 수집하고, 같은 키워드 재검색을 캐싱해 중복 요청을 줄인 뒤 CSV로 내보내는 크롤러.", en: "Job-posting crawler with per-site parsers, response caching to avoid duplicate requests on repeated keywords, and CSV export." } },
