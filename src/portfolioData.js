@@ -22,7 +22,7 @@ export const portfolio = {
   proof: { title: { ko: "핵심 성과", en: "Key outcomes" }, items: [
     { value: "40 → 52%", label: { ko: "RAG 1순위 정답률 — 평가셋 60문항으로 직접 측정", en: "RAG top-1 accuracy, measured on a 60-question set I built" } },
     { value: { ko: "보류 → 재출시", en: "Held, then re-shipped" }, label: { ko: "잔여 OCR 오답으로 배포를 보류하고, 사용자 확인 흐름을 도입해 재출시", en: "Held a release over residual OCR errors, then re-shipped with a user-confirmation flow" } },
-    { value: { ko: "논문 2편 · 수상 2회", en: "2 papers · 2 awards" }, label: { ko: "한국정보기술학회 공저 · 캡스톤 은상 · 우수논문상", en: "KIIT co-authorship · Capstone Silver · Best Paper" } },
+    { value: { ko: "논문 2편 · 수상 2회", en: "2 papers · 2 awards" }, label: { ko: "한국정보기술학회 공저 · 캡스톤 은상 · 우수논문상", en: "KIIT co-authorship · Capstone Silver · Outstanding Paper Award" } },
     { value: { ko: "검증 근거 공개", en: "Validation evidence published" }, label: { ko: "평가셋·측정 스크립트·QA·릴리스 기록을 저장소에 공개", en: "Published evaluation sets, measurement scripts, QA records, and release evidence in the repositories" } },
   ] },
   about: {
@@ -89,7 +89,7 @@ export const portfolio = {
     posterClose: { ko: "프로젝트 포스터 닫기", en: "Hide project poster" },
     moreEyebrow: { ko: "MORE WORK", en: "MORE WORK" }, moreTitle: { ko: "다른 환경에서도 문제를 풀어봤습니다.", en: "More problems, different environments." },
     more: [
-      { title: "쓰담", type: "YOLOv8 · Android · Robot", link: null, copy: { ko: "실시간 객체 탐지와 로봇 연동을 담당한 대화형 쓰레기통. 2024 한국정보기술학회 하계종합학술대회 대학생 논문경진대회 우수논문상(2024.05.24).", en: "Interactive trash-can robot with real-time detection and robot integration. Best Paper Award at the 2024 KIIT Summer Conference Student Paper Competition (May 24, 2024)." }, media: { src: "/ssodam_poster.jpg", alt: { ko: "쓰담 프로젝트 포스터", en: "Ssodam project poster" } } },
+      { title: "쓰담", type: "YOLOv8 · Android · Robot", link: null, copy: { ko: "실시간 객체 탐지와 로봇 연동을 담당한 대화형 쓰레기통. 2024 한국정보기술학회 하계종합학술대회 대학생 논문경진대회 우수논문상(2024.05.24).", en: "Interactive trash-can robot with real-time detection and robot integration. Outstanding Paper Award at the 2024 KIIT Summer Conference Student Paper Competition (May 24, 2024)." }, media: { src: "/ssodam_poster.jpg", alt: { ko: "쓰담 프로젝트 포스터", en: "Ssodam project poster" } } },
       { title: "movie_diary", type: "React · FastAPI · Cloud Run", link: "https://github.com/crushonyou2/movie_diary", copy: { ko: "감정 기반 영화 추천 서비스. 외부 API 연동과 서버리스 배포 자동화를 경험했습니다.", en: "Emotion-based film recommendations with third-party APIs and serverless deployment automation." } },
       { title: "Build-Your-Health", type: "JSP/Servlet · MySQL", link: "https://github.com/crushonyou2/Build-Your-Health", copy: { ko: "건강 기록부터 쇼핑·게시판·관리자 CRUD까지 단독 구현한 MVC 웹 애플리케이션.", en: "Solo MVC web app spanning health logs, commerce, community, and admin CRUD." } },
       { title: "dynamic_scraper", type: "Flask · BeautifulSoup", link: "https://github.com/crushonyou2/dynamic_scraper", copy: { ko: "여러 채용 사이트 결과를 사이트별 파서로 나눠 수집하고, 같은 키워드 재검색을 캐싱해 중복 요청을 줄인 뒤 CSV로 내보내는 크롤러.", en: "Job-posting crawler with per-site parsers, response caching to avoid duplicate requests on repeated keywords, and CSV export." } },
@@ -100,7 +100,7 @@ export const portfolio = {
     groups: [
       { title: { ko: "학력", en: "Education" }, items: [{ ko: "경기대학교 컴퓨터공학부 졸업", en: "B.S. in Computer Engineering, Kyonggi University" }, { ko: "2020.03 — 2026.02 · 학점 4.04/4.5", en: "Mar. 2020 — Feb. 2026 · GPA 4.04/4.5" }] },
       { title: { ko: "자격", en: "Certificates" }, items: [{ ko: "정보처리기사 · SQLD · ADsP", en: "Information Processing Engineer · SQLD · ADsP" }, { ko: "CSTS Foundation Level", en: "CSTS Foundation Level" }] },
-      { title: { ko: "연구·수상", en: "Research & awards" }, items: [{ ko: "한국정보기술학회 논문 2편 공저", en: "Co-author of 2 KIIT conference papers" }, { ko: "2025 산학협력 캡스톤디자인 경진대회 심화캡스톤디자인 부문 은상 · 경기대학교 소프트웨어중심대학", en: "2025 Industry-Academia Capstone Design Competition, Advanced Division Silver Prize · Kyonggi University SW-Centered University" }, { ko: "2024 한국정보기술학회 하계종합학술대회 대학생 논문경진대회 우수논문상 · 한국정보기술학회", en: "2024 KIIT Summer Conference Student Paper Competition, Best Paper Award · KIIT" }] },
+      { title: { ko: "연구·수상", en: "Research & awards" }, items: [{ ko: "한국정보기술학회 논문 2편 공저", en: "Co-author of 2 KIIT conference papers" }, { ko: "2025 산학협력 캡스톤디자인 경진대회 심화캡스톤디자인 부문 은상 · 경기대학교 소프트웨어중심대학", en: "2025 Industry-Academia Capstone Design Competition, Advanced Division Silver Prize · Kyonggi University SW-Centered University" }, { ko: "2024 한국정보기술학회 하계종합학술대회 대학생 논문경진대회 우수논문상 · 한국정보기술학회", en: "2024 KIIT Summer Conference Student Paper Competition, Outstanding Paper Award · KIIT" }] },
     ],
   },
   skills: [
