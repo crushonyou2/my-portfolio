@@ -36,7 +36,7 @@ function App() {
               <a href="#projects" className="button button-primary">{t(portfolio.ui.viewWork)}</a>
               <a href={portfolio.contact.github} target="_blank" rel="noreferrer" className="button button-ghost">GitHub ↗</a>
             </div>
-            <p className="hero-target mt-7 flex items-center gap-2 text-sm"><span className="status-dot" aria-hidden="true" />{t(portfolio.hero.target)}</p>
+            <p className="hero-target mt-7">{t(portfolio.hero.target)}</p>
           </motion.div>
           <motion.aside {...reveal} transition={{ ...reveal.transition, delay: 0.08 }} className="profile-card">
             <div className="profile-intro">

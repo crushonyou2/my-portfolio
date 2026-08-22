@@ -25,8 +25,8 @@ a:focus-visible,button:focus-visible { outline:3px solid rgba(0,113,227,.45); ou
 .hero-summary { max-width:850px; color:var(--muted); word-break:keep-all; }
 .hero-summary span { display:block; }
 .hero-summary-tail { white-space:nowrap; }
-.hero-target,.profile-role { color:var(--muted); }
-.status-dot { width:.55rem; height:.55rem; flex:0 0 auto; border-radius:50%; background:#32d74b; box-shadow:0 0 0 5px rgba(50,215,75,.12); }
+.profile-role { color:var(--muted); }
+.hero-target { border-left:2px solid var(--blue); padding-left:.9rem; color:var(--ink); font-size:.9rem; font-weight:500; }
 .button { display:inline-flex; min-height:2.9rem; align-items:center; justify-content:center; border:1px solid transparent; border-radius:999px; padding:.72rem 1.15rem; font-size:.88rem; font-weight:750; transition:transform .2s ease,background .2s ease,border-color .2s ease; }
 .button:hover { transform:translateY(-2px); }
 .button-primary { background:var(--blue); color:#fff; }
@@ -50,10 +50,10 @@ a:focus-visible,button:focus-visible { outline:3px solid rgba(0,113,227,.45); ou
 .proof-item span { margin-top:.7rem; color:var(--muted); font-size:.82rem; line-height:1.45; word-break:keep-all; }
 .section-title { margin-top:.8rem; color:var(--ink); font-size:clamp(2.25rem,4.5vw,4rem); line-height:1.08; letter-spacing:-.05em; font-weight:850; word-break:keep-all; white-space:pre-line; }
 .section-copy { max-width:720px; margin-top:1.25rem; color:var(--muted); font-size:1.05rem; line-height:1.8; word-break:keep-all; }
-.strength-card { position:relative; min-height:19rem; border:1px solid rgba(0,0,0,.07); border-radius:1.75rem; background:#fff; padding:1.75rem; }
+.strength-card { position:relative; min-height:18rem; border:1px solid rgba(0,0,0,.07); border-radius:1.75rem; background:#fff; padding:1.75rem; }
 .strength-card:nth-child(3) { background:var(--ink); color:#fff; }
 .card-number { color:var(--blue); font-size:.75rem; font-weight:850; letter-spacing:.15em; }
-.strength-card h3 { margin-top:5.2rem; font-size:1.55rem; font-weight:800; letter-spacing:-.035em; }
+.strength-card h3 { margin-top:4rem; font-size:1.55rem; font-weight:800; letter-spacing:-.035em; }
 .strength-card p { margin-top:.8rem; color:var(--muted); line-height:1.75; word-break:keep-all; }
 .strength-card:nth-child(3) p { color:#a1a1a6; }
 .case-study { position:relative; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); overflow:hidden; border:1px solid rgba(0,0,0,.08); border-radius:2rem; background:#fff; }
