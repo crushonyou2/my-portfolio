@@ -12,7 +12,7 @@ export const portfolio = {
     title: { ko: "재는 기준부터 직접 만듭니다.", en: "I build the yardstick first." },
     summaryLead: { ko: "백엔드와 데이터로 시스템을 만들고,", en: "I build backend and data systems," },
     summaryTail: { ko: "품질을 수치로 확인한 뒤 배포 여부를 판단합니다.", en: "then let measured quality decide what ships." },
-    target: { ko: "IT시스템·전산과 소프트웨어 품질 직무를 중심으로 지원하고 있으며, 백엔드·AI 서비스 개발 경험을 보유하고 있습니다.", en: "I focus on IT systems and software quality roles, backed by hands-on backend and AI service development experience." },
+    target: { ko: "IT시스템·SI·전산과 소프트웨어 품질 직무를 중심으로, 백엔드·AI 솔루션 직무까지 지원하고 있습니다.", en: "I focus on IT systems, systems integration (SI), and software quality roles, while also applying for backend and AI solutions positions." },
     photoAlt: { ko: "조지관 프로필 사진", en: "Portrait of Jigwan Joe" },
     quickFacts: [
       { value: "4.04 / 4.5", label: { ko: "학점", en: "GPA" } }, { value: "2026.02", label: { ko: "컴퓨터공학부 졸업", en: "Computer Engineering" } },
@@ -23,7 +23,7 @@ export const portfolio = {
     { value: "40 → 52%", label: { ko: "RAG 1순위 정답률 — 평가셋 60문항으로 직접 측정", en: "RAG top-1 accuracy, measured on a 60-question set I built" } },
     { value: { ko: "보류 → 재출시", en: "Held, then re-shipped" }, label: { ko: "잔여 OCR 오답으로 배포를 보류하고, 사용자 확인 흐름을 도입해 재출시", en: "Held a release over residual OCR errors, then re-shipped with a user-confirmation flow" } },
     { value: { ko: "논문 2편 · 수상 2회", en: "2 papers · 2 awards" }, label: { ko: "한국정보기술학회 공저 · 캡스톤 은상 · 우수논문상", en: "KIIT co-authorship · Capstone Silver · Best Paper" } },
-    { value: { ko: "원스토어 2회 배포", en: "2 ONE store releases" }, label: { ko: "기획·개발·검증·출시·재출시까지 단독 수행", en: "Owned planning, development, validation, launch, and re-release end to end" } },
+    { value: { ko: "검증 근거 공개", en: "Validation evidence published" }, label: { ko: "평가셋·측정 스크립트·QA·릴리스 기록을 저장소에 공개", en: "Published evaluation sets, measurement scripts, QA records, and release evidence in the repositories" } },
   ] },
   about: {
     eyebrow: { ko: "HOW I WORK", en: "HOW I WORK" }, title: { ko: "기술을 넓게 연결하고\n결과는 끝까지 책임집니다.", en: "Connect the stack\nown the outcome." },
@@ -108,6 +108,6 @@ export const portfolio = {
     { title: { ko: "데이터·AI", en: "Data & AI" }, items: ["PostgreSQL · pgvector", "MongoDB", "MySQL", "RAG", { ko: "임베딩·리랭킹", en: "Embedding & reranking" }] },
     { title: { ko: "품질·배포", en: "Quality & Delivery" }, items: [{ ko: "회귀 테스트 환경", en: "Regression harness" }, { ko: "CI 품질 게이트", en: "CI quality gates" }, "JUnit", "GitHub Actions", "Docker", "Google Cloud Run", "Prometheus"] },
   ],
-  contact: { eyebrow: { ko: "LET'S TALK", en: "LET'S TALK" }, title: { ko: "안정적인 서비스를 함께 만듭니다.", en: "Let's build reliable services together." }, copy: { ko: "IT시스템·전산과 소프트웨어 품질 직무를 중심으로 지원하고 있으며, 백엔드·AI 서비스 개발 경험을 보유하고 있습니다. 프로젝트나 포지션에 대해 편하게 연락해 주세요.", en: "I focus on IT systems and software quality roles, with hands-on backend and AI service development experience. Feel free to reach out about a project or position." }, email: "jigwan.joe@gmail.com", github: "https://github.com/crushonyou2" },
+  contact: { eyebrow: { ko: "LET'S TALK", en: "LET'S TALK" }, title: { ko: "안정적인 서비스를 함께 만듭니다.", en: "Let's build reliable services together." }, copy: { ko: "IT시스템·SI·전산과 소프트웨어 품질 직무를 중심으로, 백엔드·AI 솔루션 직무까지 지원하고 있습니다. 프로젝트나 포지션에 대해 편하게 연락해 주세요.", en: "I focus on IT systems, systems integration (SI), and software quality roles, while also applying for backend and AI solutions positions. Feel free to reach out about a project or position." }, email: "jigwan.joe@gmail.com", github: "https://github.com/crushonyou2" },
   footer: { ko: "측정하고 끝까지 개선하는 엔지니어", en: "An engineer who measures and improves end-to-end" },
 };
